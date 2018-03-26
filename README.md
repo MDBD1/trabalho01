@@ -13,7 +13,7 @@ Kezia de Jesus de Souza: keziajsouz@gmail.com<br>
 Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
 <br>e motivação da escolha realizada. <br>
 
->A empresa “Neworld” tem como objetivo desenvolver as cidades, usando a tecnologia para melhorar a rotina da população. O novo projeto tem como foco aperfeiçoar os pontos de ônibus público, permitindo que a população possa ter acesso às informações dos ônibus, como local que se encontra, horário de chegada, e trânsitos mais próximos, sem a necessidade de internet. 
+>A empresa “Neworld” tem como objetivo desenvolver as cidades, usando a tecnologia para melhorar a rotina da população. O novo projeto tem como foco aperfeiçoar os pontos de ônibus públicos, permitindo que a população possa ter acesso às informações dos ônibus, como o local em que o mesmo se encontra, horário de chegada, e engarrafamentos nas proximidades, sem a necessidade de internet. 
 
 
 ### 3.MINI-MUNDO Novo<br>
