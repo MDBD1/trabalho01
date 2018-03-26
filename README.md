@@ -5,16 +5,16 @@ Trabalho desenvolvido durante a disciplina de Banco de Dados do Integrado
 
 ### 1. COMPONENTES<br>
 Integrantes do grupo<br>
-segundo_componente_do_grupo: mancadinha121@gmail.com<br>
-segundo_componente_do_grupo: keziajsouz@gmail.com<br>
+Mariana Polli Gusmão: mancadinha121@gmail.com<br>
+Kezia de Jesus de Souza: keziajsouz@gmail.com<br>
 
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
 Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
 <br>e motivação da escolha realizada. <br>
 
-> A empresa "Neworld" visa colaborar com desenvolvimento de projetos para uma sociedade melhor. Sabendo-se dos desafios para gerenciar projetos dentro de uma empresa e visando unir as informações relativas ao  , departamentos e projetos em um mesmo local, ficamos motivados com o desenvolvimento deste sistema. O projeto "TimeBus" tem como objetivo gerenciar a locomoção pública de ônibus, facilitando o deslocamentos das pessoas. Para realizar suas operações adequadamente e empresa necessita de um sistema que armazene informações relativas a GPS,  e Empregados, além de também armazenar dados sobre  Dependentes e Históricos de Salário dos empregados. O sistema deverá gerar um conjunto de relatórios que por sua vez atenderá os anseios da empresa em questão.
- 
+>A empresa “Neworld” tem como objetivo desenvolver as cidades, usando a tecnologia para melhorar a rotina da população. O novo projeto tem como foco aperfeiçoar os pontos de ônibus público, permitindo que a população possa ter acesso às informações dos ônibus, como local que se encontra, horário de chegada, e trânsitos mais próximos, sem a necessidade de internet. 
+
 
 ### 3.MINI-MUNDO Novo<br>
 
