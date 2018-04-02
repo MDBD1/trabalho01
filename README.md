@@ -23,7 +23,7 @@ Descrição textual das regras de negócio definidas como um  subconjunto do mun
 cujos elementos são propriedades que desejamos incluir, processar, armazenar, 
 gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
 
-> O sistema proposto para a "Neworld” conterá as informações aqui detalhadas. Dos usuários teremos o e-mail, senha, número do ponto de ônibus e as linhas preferidas. Para o sistema central (ponto de ônibus e entrada do aplicativo) será armazenado, no caso do APP, as linhas preferidas, o ponto informado, o itinerário, engarrafamentos próximo ao local; no ponto, todas as linhas que passam pelo lugar, itinerário, engarrafamentos, e irá calcular os minutos que faltam para o transporte passa (enviará essa informação para o celular). O ônibus terá armazenado sua localização e seu número (sua “identidade”). Para identificar os engarrafamentos (trânsito pesado) usaremos as informações do aplicativo waze.
+> O sistema proposto para a "Neworld” conterá as informações aqui detalhadas. Dos usuários teremos o e-mail, senha, número do ponto de ônibus e as linhas preferidas. Para o sistema central (ponto de ônibus e entrada do aplicativo) será armazenado, no caso do APP, as linhas preferidas, o ponto informado, o itinerário, engarrafamentos próximo ao local; no ponto, todas as linhas que passam pelo lugar, itinerário, engarrafamentos, e irá calcular os minutos que faltam para o transporte passa (enviará essa informação para o celular). O ônibus terá armazenado sua localização e seu número (sua “identidade”). Para identificar os engarrafamentos (trânsito pesado) usaremos as informações do aplicativo waze. Assim teremos o projeto TimeBus desenvolvido.
 
 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
