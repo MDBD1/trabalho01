@@ -7,6 +7,7 @@ Trabalho desenvolvido durante a disciplina de Banco de Dados do Integrado
 Integrantes do grupo<br>
 Mariana Polli Gusmão: mancadinha121@gmail.com<br>
 Kezia de Jesus de Souza: keziajsouz@gmail.com<br>
+Júlia Ferreira da Silva: 
 
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
