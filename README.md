@@ -31,7 +31,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 
 ![Alt text](https://github.com/discipbd1/trab01/blob/master/balsamiq.png?raw=true "Title")
-![Arquivo PDF do Protótipo Balsamiq feito para Neworld](https://github.com/MDBD1/trabalho01/blob/master/arquivos/MDBD%20TimeBus.pdf)
+![Arquivo PDF do Protótipo Balsamiq feito para Neworld](https://github.com/MDBD1/trabalho01/blob/master/arquivos/MDBD%20F%20TimeBus.pdf)
 
 
 #### 4.1 TABELA DE DADOS DO SISTEMA:
