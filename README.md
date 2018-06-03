@@ -7,14 +7,14 @@ Trabalho desenvolvido durante a disciplina de Banco de Dados do Integrado
 Integrantes do grupo<br>
 Mariana Polli Gusmão: mancadinha121@gmail.com<br>
 Kezia de Jesus de Souza: keziajsouz@gmail.com<br>
-Júlia Ferreira da Silva: 
+Júlia Ferreira da Silva: juliafds2001@gmail.com<br>
 
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
 Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
 <br>e motivação da escolha realizada. <br>
 
->A empresa “Neworld” tem como objetivo desenvolver as cidades, usando a tecnologia para melhorar a rotina da população. O novo projeto tem como foco aperfeiçoar os pontos de ônibus públicos, permitindo que a população possa ter acesso às informações dos ônibus, como o local em que o mesmo se encontra, horário de chegada, e engarrafamentos nas proximidades, sem a necessidade de internet. 
+>A empresa “Neworld” tem como objetivo desenvolver as cidades, proporcionando maior qualidade de vida e organização, usando a tecnologia para melhorar a rotina da população, apresentando projetos que atuaram em várias áreas dentro da sociedade. A empresa está crindo um novo projeto de um aplicativo, chamado de TimeBus, que proporcionará uma melhora a mobilidade urbana, deixando as pessoas informadas sobre os transportes públicos, possibilitando que as pessoas se programem e se organizem da melhor forma para evitar, por exemplo, superlotação nos pontos de ônibus. Para isso, a empresa aperfeiçoará os pontos de ônibus públicos (para que a pessoa tenha acesso ao aplicativo dentro do ponto, com aparelhos digitais de entrada,"touch", e saída, tela), permitindo que a população possa ter acesso às informações dos ônibus, como o local em que o mesmo se encontra, horário de chegada, e engarrafamentos nas proximidades, pelos aparelho móveis e pelos aparelhos dos pontos de ônibus.
 
 
 ### 3.MINI-MUNDO Novo<br>
