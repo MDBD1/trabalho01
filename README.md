@@ -83,7 +83,7 @@ para melhor indentificar o horário do ônibus, e para dizer quais pontos esse �
 * Campo Número do ponto: serve para melhor indentificarmos cada ponto de ônibus, e ralacioná-lo com os números dos ônibus
 que ali passam.
 
-* Campo Empresa doo ônibus: optamos por esse campo para que o usuário saiba qual empresa atua em cada ponto de ônibos.
+* Campo Empresa do ônibus: optamos por esse campo para que o usuário saiba qual empresa atua em cada ponto de ônibos.
 
 * Campo Rua/Avenida/Alameda, Bairro, Cidade, Estado: colocamos esse campo para que o ponto de ônibus seja 
 melhor indentificado pelo sistema.
@@ -96,23 +96,23 @@ USUÁRIO: Tabela que armazenas as informações relativas ao usuário<br>
 E-MAIL: campo que armazena o e-mail de cada usuário cadastrado no sistema<br>
 SENHA: campo que armazena a senha de cada usuário<br>
 NOME: campo que armazena o nome de cada usuário<br>
-RUA/AVENIDA/ALAMEDA, BAIRRO, CIDADE, ESTADO e NÚMERO DA CASA: campos que armazenam o endereço do usuário, sua rua,
+RUA_AVENIDA_ALAMEDA, BAIRRO, CIDADE, ESTADO e NÚMERO_DA_CASA: campos que armazenam o endereço do usuário, sua rua,
 bairro, cidade, estado e número de sua casa, respectivamente.<br>
 
 ÔNIBUS: Tabela que armazena as informações relativas aos ônibus<br>
-NÚMERO DO ÔNIBUS: campo que armazena o número que identifica o ônibus<br>
-NÚMERO DA LINHA:  campo que armazena a linha do ônibus<br>
-HORÁRIO DE SAÍDA: campo que armazena os horários que os respectivos ônibus saem de seu ponto inicial<br>
-HORÁRIO DE CHAGADO: campo que armazena os hosrários de chegada que os ônibus chegam em seu ponto final<br>
+NÚMERO_DO_ÔNIBUS: campo que armazena o número que identifica o ônibus<br>
+NÚMERO_DA_LINHA:  campo que armazena a linha do ônibus<br>
+HORÁRIO_DE_SAÍDA: campo que armazena os horários que os respectivos ônibus saem de seu ponto inicial<br>
+HORÁRIO_DE_CHAGADO: campo que armazena os hosrários de chegada que os ônibus chegam em seu ponto final<br>
 ITINERÁRIO:  campo que armazena os locais em que os ônibus circulam<br>
 
-PONTO DE ÔNIBUS: Tabela que armazena as informções relativas aos pontos de ônibus<br>
-NÚMERO DO PONTO: campo que armazena o número que indentifica o  ponto de ôonibus.
-EMPRESA DO ÔNIBUS: campo que armazena a empresa dos ônibus que opera no ponto de ônibus<br>
-RUA/AVENIDA/ALAMEDA, BAIRRO, CIDADE e ESTADO: campos que armazenam o endereço do ponto de ônibus, sua rua,<br>
+PONTO_DE_ÔNIBUS: Tabela que armazena as informções relativas aos pontos de ônibus<br>
+NÚMERO_DO_PONTO: campo que armazena o número que indentifica o  ponto de ôonibus.
+EMPRESA_DO_ÔNIBUS: campo que armazena a empresa dos ônibus que opera no ponto de ônibus<br>
+RUA_AVENIDA_ALAMEDA, BAIRRO, CIDADE e ESTADO: campos que armazenam o endereço do ponto de ônibus, sua rua,<br>
 bairro, cidade e estado respectivamente.<br>  
 
-ÔNIBUS PONTO: tabela que armazena as informações que relacionam o ÔNIBUS com seus PONTOS DE ÔNIBUS<BR>
+ÔNIBUS_PONTO: tabela que armazena as informações que relacionam o ÔNIBUS com seus PONTOS DE ÔNIBUS<BR>
     
 >## Marco de Entrega 01 em: (12/05/2018)<br>
 ### 6 MODELO LÓGICO<br>
@@ -210,7 +210,7 @@ values (234567, 400,'12:00:00','12:30:00','Avenida Paulo Pereira Gomes'),(534285
 (45689,	789,'10:10:00','11:40:00','Civit ll'),(978678,500,'11:55:00','12:55:00','Avenida João Palácio'),
 (12345,	121,'12:40:00','13:45:00','Avenida Américo Buiaz'),(64321, 560,'11:52:00','14:15:00','Avenida Guarapari');
 
-insert into ponto_de_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
+insert into ponto_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
 values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito Santo'),
 (12345,'Transcol','Avenida Fernando Ferrari','Jardim da Penha','Vitória','Espírito Santo'),
 (87654,'Transcol','Avenida Eudes Scherrer de Souza','Laranjeiras','Serra','Espírito Santo'),
@@ -222,7 +222,7 @@ values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito S
 (123090,'Transcol','Avenida Luciano das Neves','Itapuã','Vila Velha','Espírito Santo'),
 (4893095,'Seletivo','Avenida Guarapari','Santa Luzia','Serra','Espírito Santo');
 
-insert into ponto_onibus(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
+insert into onibus_ponto(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
 (785444,96543),(45689,1006),(978678,12456)(12345,123090),(64321,4893095);
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
@@ -317,7 +317,7 @@ values (234567, 400,'12:00:00','12:30:00','Avenida Paulo Pereira Gomes'),(534285
 (45689,	789,'10:10:00','11:40:00','Civit ll'),(978678,500,'11:55:00','12:55:00','Avenida João Palácio'),
 (12345,	121,'12:40:00','13:45:00','Avenida Américo Buiaz'),(64321, 560,'11:52:00','14:15:00','Avenida Guarapari');
 
-insert into ponto_de_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
+insert into ponto_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
 values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito Santo'),
 (12345,'Transcol','Avenida Fernando Ferrari','Jardim da Penha','Vitória','Espírito Santo'),
 (87654,'Transcol','Avenida Eudes Scherrer de Souza','Laranjeiras','Serra','Espírito Santo'),
@@ -329,7 +329,7 @@ values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito S
 (123090,'Transcol','Avenida Luciano das Neves','Itapuã','Vila Velha','Espírito Santo'),
 (4893095,'Seletivo','Avenida Guarapari','Santa Luzia','Serra','Espírito Santo');
 
-insert into ponto_onibus(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
+insert into onibus_ponto(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
 (785444,96543),(45689,1006),(978678,12456)(12345,123090),(64321,4893095);
 
         
@@ -426,7 +426,7 @@ values (234567, 400,'12:00:00','12:30:00','Avenida Paulo Pereira Gomes'),(534285
 (45689,	789,'10:10:00','11:40:00','Civit ll'),(978678,500,'11:55:00','12:55:00','Avenida João Palácio'),
 (12345,	121,'12:40:00','13:45:00','Avenida Américo Buiaz'),(64321, 560,'11:52:00','14:15:00','Avenida Guarapari');
 
-insert into ponto_de_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
+insert into ponto_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
 values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito Santo'),
 (12345,'Transcol','Avenida Fernando Ferrari','Jardim da Penha','Vitória','Espírito Santo'),
 (87654,'Transcol','Avenida Eudes Scherrer de Souza','Laranjeiras','Serra','Espírito Santo'),
@@ -438,7 +438,7 @@ values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito S
 (123090,'Transcol','Avenida Luciano das Neves','Itapuã','Vila Velha','Espírito Santo'),
 (4893095,'Seletivo','Avenida Guarapari','Santa Luzia','Serra','Espírito Santo');
 
-insert into ponto_onibus(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
+insert into onibus_ponto(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
 (785444,96543),(45689,1006),(978678,12456)(12345,123090),(64321,4893095);
 
 drop table USUARIO;
@@ -454,36 +454,11 @@ drop table ponto_onibus;
 ### 9 TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1 CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
-
-select * from usuario;
-select * from onibus;
-select * from ponto_de_onibus;
-select * from ponto_onibus;
-<br>
 #### 9.2 CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
-
-select * from usuario where cidade='Serra';
-select nome from usuario where n_da_casa>1000;
-select * from usuario where bairro<>'Valparaíso';
-select * from onibus where n_onibus=234567;
-<br>
 #### 9.3 CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
-    
-a)<br>
-select estado from usuario where n_da_casa>100 and n_da_casa<1000;
-select cidade from usuario where estado='Espírito Santo' or estado='Bahia';
-select n_onibus from onibus where saida='12:00:00' and chegada='12:30:00';
-select * from ponto_de_onibus where n_ponto is not null;
-select * from onibus where n_onibus>500000 and n_linha>400 or n_onibus<200000 and n_linha<200;
-<br>
-b)<br>
-
-<br>
-   
-    
 #### 9.4 CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
     b) Criar uma consulta para cada tipo de função data apresentada.
