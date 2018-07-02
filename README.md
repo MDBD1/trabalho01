@@ -116,9 +116,7 @@ bairro, cidade e estado respectivamente.<br>
     
 >## Marco de Entrega 01 em: (12/05/2018)<br>
 ### 6 MODELO LÓGICO<br>
-        a) inclusão do modelo lógico do banco de dados
-        b) verificação de correspondencia com o modelo conceitual
-        (não serão aceitos modelos que não estejam em conformidade)
+   [Modelo lógico](https://github.com/MDBD1/trabalho01/blob/master/imagens/2018-07-02.png)
 ### 7 MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas DDL
         (criação de tabelas, alterações, etc..)          
