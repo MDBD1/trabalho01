@@ -31,13 +31,16 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes?
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
     
-> A Empresa DevCom precisa inicialmente dos seguintes relatórios:
-* Relatório que informe quais são os gerentes de cada departamento incluindo as seguintes informações: número do departamento,  nome do departamento, e nome do gerente.
-* Relatório de empregados por projeto incluindo as seguintes informações: número do projeto, nome do projeto, rg do empregado, nome do empregado e quantidade de horas de trabalho do empregado alocadas ao projeto.
-* Relatório de empregados com dependentes incluindo as seguintes informações: rg do empregado, nome do empregado, nome do dependente, tipo de relação, data de nascimento do dependente e sexo do dependente.
-* Relatório com a quantidade de empregados por cada departamento incluindo as seguintes informações: nome do departamento, supervisor e quantidade de empregados alocados no departamento.
-* Relatório de supervisores e supervisionados incluindo as seguintes informações: nome do supervisor e nome do supervisionado.
- 
+> A Empresa Neworld precisa inicialmente dos seguintes relatórios:
+* Relatório que informe quais são os usuários presentes no sistema incluindo as seguintes informações:
+email do usuário, senha do usuário, nome e seu endereço(Rua, bairro, cidade, estado, número da casa).
+* Relatório dos ônibus presentes no sistema incluindo as seguintes informações: número do ônibus,
+número de linha do ônibus, horários de saída e chegada do ônibus e seu itinerário.
+* Relatório dos pontos de ônibus do sistema incluindo as seguintes informações: número do ponto, 
+empresa do ônibus(que passa por aquele ponto) e sua localização(rua, bairro, cidade, estado).
+* Relatório de ônibus com ponto de ônibus incluindo as seguintes informações: número do ônibus e 
+número do ponto de ônibus.
+
  
 #### 4.2 TABELA DE DADOS DO SISTEMA:
     a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
