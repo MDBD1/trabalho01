@@ -112,7 +112,7 @@ EMPRESA DO ÔNIBUS: campo que armazena a empresa dos ônibus que opera no ponto 
 RUA/AVENIDA/ALAMEDA, BAIRRO, CIDADE e ESTADO: campos que armazenam o endereço do ponto de ônibus, sua rua,<br>
 bairro, cidade e estado respectivamente.<br>  
 
-ÔNIBUS PONTO: tabela que armazena as informações que realacionam o ÔNIBUS com seus PONTOS DE ÔNIBUS<BR>
+ÔNIBUS PONTO: tabela que armazena as informações que relacionam o ÔNIBUS com seus PONTOS DE ÔNIBUS<BR>
     
 >## Marco de Entrega 01 em: (12/05/2018)<br>
 ### 6 MODELO LÓGICO<br>
