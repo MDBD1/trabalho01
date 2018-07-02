@@ -37,9 +37,12 @@ número do ponto de ônibus.
 
  
 #### 4.2 TABELA DE DADOS DO SISTEMA:
-   
+    a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
+    b) Esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados
+    e deve ser criada antes do modelo conceitual
+    c) Após criada esta tabela não deve ser modificada, pois será comparada com os resultados finais na conclusão do trabalho
     
-![ Tabela de dados da Empresa Neworld](https://github.com/MDBD1/trabalho01/blob/master/arquivos/TabelaEmpresaNeworld2.xlsx "Tabela - Empresa Neworld")
+![Exemplo de Tabela de dados da Empresa Devcom](https://github.com/discipint/trabalho01/blob/master/arquivos/TabelaEmpresaDevCom_sample.xlsx?raw=true "Tabela - Empresa Devcom")
     
 >## Marco de Entrega 01 em: (24/03/2018)<br>
 ### 5.MODELO CONCEITUAL<br>
@@ -186,21 +189,268 @@ ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_1
         
 ### 8 INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físic
+        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
         b) formato .SQL
+        
+insert into USUARIO(email,senha,nome,rua_avenida, bairro, cidade, estado, n_da_casa)
+values ('fernadasilva@email.com','tuyghj678','Fernanda da Silva', 'Avenida Fernando Ferrari','Goiabeiras','Vitória','Espírito Santo',56),('mariaclara@email.com','sckopdnefj8','Maria Clara dos Santos','Emanuel Ribeiro','Laranjeiras','Serra','Espírito Santo' 
+,1600),('robertaOliveira@email.com','qreytjukfd','Roberta Oliveira','Garrafa Furada','Churrasco','Vila Velha','Espírito Santo',1601),
+('dsgfdhsj@email.com','bibibibibi','Mark Pereira','Batata','Carne Moida','Viana','Espírito Santo' ,1602),
+('blablabla@email.com','qwer1234','Beatris dos Santos','Reta da penha','Patinho','São Paulo','São Paulo',1603),
+('lkdaqwe@email.com','123890iop','Jackson Wang','Melancia','Lombo','Cariacica','Espírito Santo',1604),
+('weakSempre@email.com','universo123','Karen Bachini','Abóbora','Bife','Serra','Espírito Santo',1605),
+('bliblipimpim@gmail','kkj1234','Maria Carolina Da Silva','Abacate','Picanha','Serra','Espírito Santo',1606),
+('guiSilveira@email.com','6543212','Guilherme Silveira','Gato Preto','Tigre',' Vitória da Conquista','Bahia',1607),
+('jubilix@gmail.com','coisalinda','Juliana Vasconcelos','Rua Anchieta','Valparaíso','Serra','Espírito Santo', 50);
+
+insert into onibus(n_onibus,n_linha,saida,chegada,itinerario)
+values (234567, 400,'12:00:00','12:30:00','Avenida Paulo Pereira Gomes'),(534285, 289,'13:10:00','13:50:00','Rua Anchieta'),
+(123454, 567,'11:00:00','11:50:00','Avenida Fernando Ferrari'),(876557, 900,'05:40:00','06:00:00','Avenida Norte Sul'),
+(645323, 432,'08:40:00','09:40:00','Avenida Central'),(785444, 72,'09:50:00','16:30:00','Avenida Eudes Scherrer de Souza'),
+(45689,	789,'10:10:00','11:40:00','Civit ll'),(978678,500,'11:55:00','12:55:00','Avenida João Palácio'),
+(12345,	121,'12:40:00','13:45:00','Avenida Américo Buiaz'),(64321, 560,'11:52:00','14:15:00','Avenida Guarapari');
+
+insert into ponto_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
+values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito Santo'),
+(12345,'Transcol','Avenida Fernando Ferrari','Jardim da Penha','Vitória','Espírito Santo'),
+(87654,'Transcol','Avenida Eudes Scherrer de Souza','Laranjeiras','Serra','Espírito Santo'),
+(57687,'Seletivo','Rua Anchieta','Santa Luzia','Serra','Espírito Santo'),
+(53034,'Seletivo','Avenida Norte Sul','Rosário de Fátima','Serra','Espírito Santo'),
+(96543,'Transcol','Avenida Saturnino de Brito','Santa Helena','Vitória','Espírito Santo'),
+(1006,'Transcol','Rodovia Governado Mário Covas','Rosário de Fátima','Serra','Espírito Santo'),
+(12456,'Transcol','Rua Antônio Ataíde','Itapuã','Vila Velha','Espírito Santo'),
+(123090,'Transcol','Avenida Luciano das Neves','Itapuã','Vila Velha','Espírito Santo'),
+(4893095,'Seletivo','Avenida Guarapari','Santa Luzia','Serra','Espírito Santo');
+
+insert into onibus_ponto(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
+(785444,96543),(45689,1006),(978678,12456)(12345,123090),(64321,4893095);
+
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
         a) Junção dos scripts anteriores em um único script
         (create para tabelas e estruturas de dados + dados a serem inseridos)
         b) Criar um novo banco de dados para testar a restauracao
         (em caso de falha na restauração o grupo não pontuará neste quesito)
         c) formato .SQL
+        
+CREATE TABLE USUARIO (
+    email varchar(80) PRIMARY KEY,
+    senha varchar(80),
+    nome varchar(80),
+    n_da_casa varchar(80),
+    rua_avenida  varchar(255),
+    bairro varchar(100),
+    estado varchar(100),
+    cidade varchar(100)
+);
+
+CREATE TABLE ONIBUS (
+    n_onibus int PRIMARY KEY,
+    n_linha int,
+    saida time,
+    chegada time,
+    itinerario varchar(255)
+);
+
+CREATE TABLE PONTO_DE_ONIBUS (
+    n_ponto int PRIMARY KEY,
+    tipo_de_onibus varchar(80),
+    cidade varchar(100),
+    rua_avenida varchar(255),
+    bairro varchar(100),
+    estado varchar(100)
+);
+
+CREATE TABLE ENTRADA (
+);
+
+CREATE TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS (
+    FK_USUARIO_email varchar(80),
+    FK_PONTO_DE_ONIBUS_n_ponto int,
+    FK_ONIBUS_n_onibus int
+);
+
+CREATE TABLE ponto_onibus (
+    FK_ONIBUS_n_onibus int,
+    FK_PONTO_DE_ONIBUS_n_ponto int
+);
+ 
+ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_0
+    FOREIGN KEY (FK_USUARIO_email)
+    REFERENCES USUARIO (email)
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+ 
+ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_1
+    FOREIGN KEY (FK_PONTO_DE_ONIBUS_n_ponto)
+    REFERENCES PONTO_DE_ONIBUS (n_ponto)
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+ 
+ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_2
+    FOREIGN KEY (FK_ONIBUS_n_onibus)
+    REFERENCES ONIBUS (n_onibus)
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+ 
+ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_0
+    FOREIGN KEY (FK_ONIBUS_n_onibus)
+    REFERENCES ONIBUS (n_onibus)
+    ON DELETE SET NULL ON UPDATE CASCADE;
+ 
+ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_1
+    FOREIGN KEY (FK_PONTO_DE_ONIBUS_n_ponto)
+    REFERENCES PONTO_DE_ONIBUS (n_ponto)
+    ON DELETE SET NULL ON UPDATE CASCADE; 
+    
+insert into USUARIO(email,senha,nome,rua_avenida, bairro, cidade, estado, n_da_casa)
+values ('fernadasilva@email.com','tuyghj678','Fernanda da Silva', 'Avenida Fernando Ferrari','Goiabeiras','Vitória','Espírito Santo',56),('mariaclara@email.com','sckopdnefj8','Maria Clara dos Santos','Emanuel Ribeiro','Laranjeiras','Serra','Espírito Santo' 
+,1600),('robertaOliveira@email.com','qreytjukfd','Roberta Oliveira','Garrafa Furada','Churrasco','Vila Velha','Espírito Santo',1601),
+('dsgfdhsj@email.com','bibibibibi','Mark Pereira','Batata','Carne Moida','Viana','Espírito Santo' ,1602),
+('blablabla@email.com','qwer1234','Beatris dos Santos','Reta da penha','Patinho','São Paulo','São Paulo',1603),
+('lkdaqwe@email.com','123890iop','Jackson Wang','Melancia','Lombo','Cariacica','Espírito Santo',1604),
+('weakSempre@email.com','universo123','Karen Bachini','Abóbora','Bife','Serra','Espírito Santo',1605),
+('bliblipimpim@gmail','kkj1234','Maria Carolina Da Silva','Abacate','Picanha','Serra','Espírito Santo',1606),
+('guiSilveira@email.com','6543212','Guilherme Silveira','Gato Preto','Tigre',' Vitória da Conquista','Bahia',1607),
+('jubilix@gmail.com','coisalinda','Juliana Vasconcelos','Rua Anchieta','Valparaíso','Serra','Espírito Santo', 50);
+
+insert into onibus(n_onibus,n_linha,saida,chegada,itinerario)
+values (234567, 400,'12:00:00','12:30:00','Avenida Paulo Pereira Gomes'),(534285, 289,'13:10:00','13:50:00','Rua Anchieta'),
+(123454, 567,'11:00:00','11:50:00','Avenida Fernando Ferrari'),(876557, 900,'05:40:00','06:00:00','Avenida Norte Sul'),
+(645323, 432,'08:40:00','09:40:00','Avenida Central'),(785444, 72,'09:50:00','16:30:00','Avenida Eudes Scherrer de Souza'),
+(45689,	789,'10:10:00','11:40:00','Civit ll'),(978678,500,'11:55:00','12:55:00','Avenida João Palácio'),
+(12345,	121,'12:40:00','13:45:00','Avenida Américo Buiaz'),(64321, 560,'11:52:00','14:15:00','Avenida Guarapari');
+
+insert into ponto_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
+values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito Santo'),
+(12345,'Transcol','Avenida Fernando Ferrari','Jardim da Penha','Vitória','Espírito Santo'),
+(87654,'Transcol','Avenida Eudes Scherrer de Souza','Laranjeiras','Serra','Espírito Santo'),
+(57687,'Seletivo','Rua Anchieta','Santa Luzia','Serra','Espírito Santo'),
+(53034,'Seletivo','Avenida Norte Sul','Rosário de Fátima','Serra','Espírito Santo'),
+(96543,'Transcol','Avenida Saturnino de Brito','Santa Helena','Vitória','Espírito Santo'),
+(1006,'Transcol','Rodovia Governado Mário Covas','Rosário de Fátima','Serra','Espírito Santo'),
+(12456,'Transcol','Rua Antônio Ataíde','Itapuã','Vila Velha','Espírito Santo'),
+(123090,'Transcol','Avenida Luciano das Neves','Itapuã','Vila Velha','Espírito Santo'),
+(4893095,'Seletivo','Avenida Guarapari','Santa Luzia','Serra','Espírito Santo');
+
+insert into onibus_ponto(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
+(785444,96543),(45689,1006),(978678,12456)(12345,123090),(64321,4893095);
+
+        
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
         a) Junção dos scripts anteriores em um único script
         (Drop table + Create de tabelas e estruturas de dados + dados a serem inseridos)
         b) Criar um novo banco de dados para testar a restauracao
         (em caso de falha na restauração o grupo não pontuará neste quesito)
         c) formato .SQL
+  
+        
+CREATE TABLE USUARIO (
+    email varchar(80) PRIMARY KEY,
+    senha varchar(80),
+    nome varchar(80),
+    n_da_casa varchar(80),
+    rua_avenida  varchar(255),
+    bairro varchar(100),
+    estado varchar(100),
+    cidade varchar(100)
+);
 
+CREATE TABLE ONIBUS (
+    n_onibus int PRIMARY KEY,
+    n_linha int,
+    saida time,
+    chegada time,
+    itinerario varchar(255)
+);
+
+CREATE TABLE PONTO_DE_ONIBUS (
+    n_ponto int PRIMARY KEY,
+    tipo_de_onibus varchar(80),
+    cidade varchar(100),
+    rua_avenida varchar(255),
+    bairro varchar(100),
+    estado varchar(100)
+);
+
+CREATE TABLE ENTRADA (
+);
+
+CREATE TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS (
+    FK_USUARIO_email varchar(80),
+    FK_PONTO_DE_ONIBUS_n_ponto int,
+    FK_ONIBUS_n_onibus int
+);
+
+CREATE TABLE ponto_onibus (
+    FK_ONIBUS_n_onibus int,
+    FK_PONTO_DE_ONIBUS_n_ponto int
+);
+ 
+ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_0
+    FOREIGN KEY (FK_USUARIO_email)
+    REFERENCES USUARIO (email)
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+ 
+ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_1
+    FOREIGN KEY (FK_PONTO_DE_ONIBUS_n_ponto)
+    REFERENCES PONTO_DE_ONIBUS (n_ponto)
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+ 
+ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_2
+    FOREIGN KEY (FK_ONIBUS_n_onibus)
+    REFERENCES ONIBUS (n_onibus)
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+ 
+ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_0
+    FOREIGN KEY (FK_ONIBUS_n_onibus)
+    REFERENCES ONIBUS (n_onibus)
+    ON DELETE SET NULL ON UPDATE CASCADE;
+ 
+ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_1
+    FOREIGN KEY (FK_PONTO_DE_ONIBUS_n_ponto)
+    REFERENCES PONTO_DE_ONIBUS (n_ponto)
+    ON DELETE SET NULL ON UPDATE CASCADE; 
+    
+insert into USUARIO(email,senha,nome,rua_avenida, bairro, cidade, estado, n_da_casa)
+values ('fernadasilva@email.com','tuyghj678','Fernanda da Silva', 'Avenida Fernando Ferrari','Goiabeiras','Vitória','Espírito Santo',56),('mariaclara@email.com','sckopdnefj8','Maria Clara dos Santos','Emanuel Ribeiro','Laranjeiras','Serra','Espírito Santo' 
+,1600),('robertaOliveira@email.com','qreytjukfd','Roberta Oliveira','Garrafa Furada','Churrasco','Vila Velha','Espírito Santo',1601),
+('dsgfdhsj@email.com','bibibibibi','Mark Pereira','Batata','Carne Moida','Viana','Espírito Santo' ,1602),
+('blablabla@email.com','qwer1234','Beatris dos Santos','Reta da penha','Patinho','São Paulo','São Paulo',1603),
+('lkdaqwe@email.com','123890iop','Jackson Wang','Melancia','Lombo','Cariacica','Espírito Santo',1604),
+('weakSempre@email.com','universo123','Karen Bachini','Abóbora','Bife','Serra','Espírito Santo',1605),
+('bliblipimpim@gmail','kkj1234','Maria Carolina Da Silva','Abacate','Picanha','Serra','Espírito Santo',1606),
+('guiSilveira@email.com','6543212','Guilherme Silveira','Gato Preto','Tigre',' Vitória da Conquista','Bahia',1607),
+('jubilix@gmail.com','coisalinda','Juliana Vasconcelos','Rua Anchieta','Valparaíso','Serra','Espírito Santo', 50);
+
+insert into onibus(n_onibus,n_linha,saida,chegada,itinerario)
+values (234567, 400,'12:00:00','12:30:00','Avenida Paulo Pereira Gomes'),(534285, 289,'13:10:00','13:50:00','Rua Anchieta'),
+(123454, 567,'11:00:00','11:50:00','Avenida Fernando Ferrari'),(876557, 900,'05:40:00','06:00:00','Avenida Norte Sul'),
+(645323, 432,'08:40:00','09:40:00','Avenida Central'),(785444, 72,'09:50:00','16:30:00','Avenida Eudes Scherrer de Souza'),
+(45689,	789,'10:10:00','11:40:00','Civit ll'),(978678,500,'11:55:00','12:55:00','Avenida João Palácio'),
+(12345,	121,'12:40:00','13:45:00','Avenida Américo Buiaz'),(64321, 560,'11:52:00','14:15:00','Avenida Guarapari');
+
+insert into ponto_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
+values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito Santo'),
+(12345,'Transcol','Avenida Fernando Ferrari','Jardim da Penha','Vitória','Espírito Santo'),
+(87654,'Transcol','Avenida Eudes Scherrer de Souza','Laranjeiras','Serra','Espírito Santo'),
+(57687,'Seletivo','Rua Anchieta','Santa Luzia','Serra','Espírito Santo'),
+(53034,'Seletivo','Avenida Norte Sul','Rosário de Fátima','Serra','Espírito Santo'),
+(96543,'Transcol','Avenida Saturnino de Brito','Santa Helena','Vitória','Espírito Santo'),
+(1006,'Transcol','Rodovia Governado Mário Covas','Rosário de Fátima','Serra','Espírito Santo'),
+(12456,'Transcol','Rua Antônio Ataíde','Itapuã','Vila Velha','Espírito Santo'),
+(123090,'Transcol','Avenida Luciano das Neves','Itapuã','Vila Velha','Espírito Santo'),
+(4893095,'Seletivo','Avenida Guarapari','Santa Luzia','Serra','Espírito Santo');
+
+insert into onibus_ponto(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
+(785444,96543),(45689,1006),(978678,12456)(12345,123090),(64321,4893095);
+
+drop table USUARIO;
+drop table ONIBUS;
+drop table PONTO_DE_ONIBUS;
+drop table ENTRADA;
+drop table acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS;
+drop table ponto_onibus;
+
+  
+  
+  
 ### 9 TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1 CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
