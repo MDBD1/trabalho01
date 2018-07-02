@@ -8,17 +8,13 @@ Kezia de Jesus de Souza: keziajsouz@gmail.com<br>
 Júlia Ferreira da Silva: juliafds2001@gmail.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
-Este documento contém a especificação do projeto do banco de dados <nome do projeto>
+Este documento contém a especificação do projeto do banco de dados TimeBus
 <br>e motivação da escolha realizada. <br>
 >A empresa “Neworld” tem como objetivo desenvolver as cidades, proporcionando maior qualidade de vida e organização, usando a tecnologia para melhorar a rotina da população, apresentando projetos que atuaram em várias áreas dentro da sociedade. A empresa está crindo um novo projeto de um aplicativo, chamado de TimeBus, que proporcionará uma melhora a mobilidade urbana, deixando as pessoas informadas sobre os transportes públicos, possibilitando que as pessoas se programem e se organizem da melhor forma para evitar, por exemplo, superlotação nos pontos de ônibus. Para isso, a empresa aperfeiçoará os pontos de ônibus públicos (para que a pessoa tenha acesso ao aplicativo dentro do ponto, com aparelhos digitais de entrada,"touch", e saída, tela), permitindo que a população possa ter acesso às informações dos ônibus, como o local em que o mesmo se encontra, horário de chegada, e engarrafamentos nas proximidades, pelos aparelho móveis e pelos aparelhos dos pontos de ônibus.
 
  
 ### 3.MINI-MUNDO Novo<br>
-Descrever o mini-mundo! (Não deve ser maior do que 30 linhas) <br>
-Entrevista com o usuário e identificação dos requisitos.<br>
-Descrição textual das regras de negócio definidas como um  subconjunto do mundo real
-cujos elementos são propriedades que desejamos incluir, processar, armazenar,
-gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
+
 > O “TimeBus”, sistema proposto para a "Neworld” conterá as informações aqui detalhadas. O sistema terá como entrada o local onde o usuário acessa as informações sobre o ônibus e os pontos de ônibus. Ele utilizará o nome, e-mail, senha, e o endereço (rua, avenida, bairro, cidade, etc) dos usuários para fazer o cadastro no sistema. O sistema também irá pedir as informações sobre os pontos de ônibus: número do ponto, empresas de ônibus que passam pelo ponto referido (tipo do ônibus), e o endereço do ponto. Depois será feita a leitura das informações dos ônibus em questão: número do ônibus, número da linha, horário (chegada e saída) e o itinerário.  E irá contar com o waze para identificar os pontos de engarrafamento (trânsito pesado). Desse modo, teremos o projeto “TimeBus” desenvolvido.
 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
@@ -28,8 +24,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 ![Arquivo PDF do Protótipo Balsamiq feito para Neworld](https://github.com/MDBD1/trabalho01/blob/master/arquivos/MDBD%20F%20TimeBus.pdf)
 
 #### 4.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
-    a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes?
-    b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
+    
     
 > A Empresa Neworld precisa inicialmente dos seguintes relatórios:
 * Relatório que informe quais são os usuários presentes no sistema incluindo as seguintes informações:
@@ -52,19 +47,11 @@ número do ponto de ônibus.
     
 >## Marco de Entrega 01 em: (24/03/2018)<br>
 ### 5.MODELO CONCEITUAL<br>
-    A) NOTACAO ENTIDADE RELACIONAMENTO
-        * Para nosso prótótipo limitaremos o modelo conceitual nas 5 principais entidades do escopo
-        * O protótipo deve possui no mínimo duas relações N para N
-        * o mínimo de entidades do modelo conceitual será igual a 5
+   
         
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/2018-06-30%20(5).png)
     
-    B) QUALIDADE
-        Garantir que a semântica dos atributos seja clara no esquema
-        Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null,
-        e tuplas falsas
     
-        
     
 #### 5.1 Validação do Modelo Conceitual
     [Grupo01]: [Nomes dos que participaram na avaliação]
@@ -102,16 +89,32 @@ que ali passam.
 * Campo Rua/Avenida/Alameda, Bairro, Cidade, Estado: colocamos esse campo para que o ponto de ônibus seja 
 melhor indentificado pelo sistema.
 
-    EXEMPLO:
-    a) Campo endereço: em nosso projeto optamos por um campo multivalorado e composto, pois a empresa
-    pode possuir para cada departamento mais de uma localização...
-    b) justifique!
+    
 #### 5.3 DESCRIÇÃO DOS DADOS
     [objeto]: [descrição do objeto]
     
-    EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+USUÁRIO: Tabela que armazenas as informações relativas ao usuário<br>
+E-MAIL: campo que armazena o e-mail de cada usuário cadastrado no sistema<br>
+SENHA: campo que armazena a senha de cada usuário<br>
+NOME: campo que armazena o nome de cada usuário<br>
+RUA/AVENIDA/ALAMEDA, BAIRRO, CIDADE, ESTADO e NÚMERO DA CASA: campos que armazenam o endereço do usuário, sua rua,<br>
+bairro, cidade, estado e número de sua casa, respectivamente.<br>
+
+ÔNIBUS: Tabela que armazena as informações relativas aos ônibus<br>
+NÚMERO DO ÔNIBUS: campo que armazena o número que identifica o ônibus<br>
+NÚMERO DA LINHA:  campo que armazena a linha do ônibus<br>
+HORÁRIO DE SAÍDA: campo que armazena os horários que os respectivos ônibus saem de seu ponto inicial<br>
+HORÁRIO DE CHAGADO: campo que armazena os hosrários de chegada que os ônibus chegam em seu ponto final<br>
+ITINERÁRIO:  campo que armazena os locais em que os ônibus circulam<br>
+
+PONTO DE ÔNIBUS: Tabela que armazena as informções relativas aos pontos de ônibus<br>
+NÚMERO DO PONTO: campo que armazena o número que indentifica o  ponto de ôonibus.
+EMPRESA DO ÔNIBUS: campo que armazena a empresa dos ônibus que opera no ponto de ônibus<br>
+RUA/AVENIDA/ALAMEDA, BAIRRO, CIDADE e ESTADO: campos que armazenam o endereço do ponto de ônibus, sua rua,<br>
+bairro, cidade e estado respectivamente.<br>  
+
+ÔNIBUS PONTO: tabela que armazena as informações que realacionam o ÔNIBUS com seus PONTOS DE ÔNIBUS<BR>
+    
 >## Marco de Entrega 01 em: (12/05/2018)<br>
 ### 6 MODELO LÓGICO<br>
         a) inclusão do modelo lógico do banco de dados
