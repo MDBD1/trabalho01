@@ -164,23 +164,26 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 <br>
 Data de Entrega: (Data a ser definida)
 <br>
-#### 9.14 APLICAÇAO DE ÍNDICES E TESTES DE PERFORMANCE<br>
-    a) Lista de índices, tipos de índices com explicação de porque foram implementados nas consultas
+
+#### 9.14	APLICAÇAO DE ÍNDICES E TESTES DE PERFORMANCE<br>
+    a) Lista de índices, tipos de índices com explicação de porque foram implementados nas consultas 
     b) Performance esperada VS Resultados obtidos
     c) Tabela de resultados comparando velocidades antes e depois da aplicação dos índices (constando velocidade esperada com planejamento, sem indice e com índice Vs velocidade de execucao real com índice e sem índice).
     d) Escolher as consultas mais complexas para serem analisadas (consultas com menos de 2 joins não serão aceitas)
     e) As imagens do Explain devem ser inclusas no trabalho, bem como explicações sobre os resultados obtidos.
-    f) Inclusão de tabela mostrando as 10 execuções, excluindo-se o maior e menor tempos para cada consulta e
+    f) Inclusão de tabela mostrando as 10 execuções, excluindo-se o maior e menor tempos para cada consulta e 
     obtendo-se a media dos outros valores como resultado médio final.
 <br>
     Data de Entrega: (Data a ser definida)
-<br>  
-### 10 ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
+<br>   
+
+### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 <br>
     Data de Entrega: (Data a ser definida)
 <br>
-### 11 Backup completo do banco de dados postgres
-    a) deve ser realizado no formato "backup"
+
+### 11 Backup completo do banco de dados postgres 
+    a) deve ser realizado no formato "backup" 
         (Em Dump Options #1 Habilitar opções Don't Save Owner e Privilege)
     b) antes de postar o arquivo no git o mesmo deve ser testado/restaurado por outro grupo de alunos/dupla
     c) informar aqui o grupo de alunos/dupla que realizou o teste.
