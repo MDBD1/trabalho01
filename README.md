@@ -18,8 +18,7 @@ Este documento contém a especificação do projeto do banco de dados TimeBus
 > O “TimeBus”, sistema proposto para a "Neworld” conterá as informações aqui detalhadas. O sistema terá como entrada o local onde o usuário acessa as informações sobre o ônibus e os pontos de ônibus. Ele utilizará o nome, e-mail, senha, e o endereço (rua, avenida, bairro, cidade, etc) dos usuários para fazer o cadastro no sistema. O sistema também irá pedir as informações sobre os pontos de ônibus: número do ponto, empresas de ônibus que passam pelo ponto referido (tipo do ônibus), e o endereço do ponto. Depois será feita a leitura das informações dos ônibus em questão: número do ônibus, número da linha, horário (chegada e saída) e o itinerário.  E irá contar com o waze para identificar os pontos de engarrafamento (trânsito pesado). Desse modo, teremos o projeto “TimeBus” desenvolvido.
 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
-Neste ponto a codificação não e necessária, somente as ideias de telas devem ser desenvolvidas. O princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas e/ou descartadas <br>
-Sugestão: https://balsamiq.com/products/mockups/<br>
+
 ![Alt text](https://github.com/discipbd1/trab01/blob/master/balsamiq.png?raw=true "Title")
 ![Arquivo PDF do Protótipo Balsamiq feito para Neworld](https://github.com/MDBD1/trabalho01/blob/master/arquivos/MDBD%20F%20TimeBus.pdf)
 
@@ -97,7 +96,7 @@ USUÁRIO: Tabela que armazenas as informações relativas ao usuário<br>
 E-MAIL: campo que armazena o e-mail de cada usuário cadastrado no sistema<br>
 SENHA: campo que armazena a senha de cada usuário<br>
 NOME: campo que armazena o nome de cada usuário<br>
-RUA/AVENIDA/ALAMEDA, BAIRRO, CIDADE, ESTADO e NÚMERO DA CASA: campos que armazenam o endereço do usuário, sua rua,<br>
+RUA/AVENIDA/ALAMEDA, BAIRRO, CIDADE, ESTADO e NÚMERO DA CASA: campos que armazenam o endereço do usuário, sua rua,
 bairro, cidade, estado e número de sua casa, respectivamente.<br>
 
 ÔNIBUS: Tabela que armazena as informações relativas aos ônibus<br>
