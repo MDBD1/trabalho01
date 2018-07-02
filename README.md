@@ -72,7 +72,35 @@ número do ponto de ônibus.
 ## Marco de Entrega 01 em: (20/04/2018)<br>
 #### 5.2 DECISÕES DE PROJETO
     [atributo]: [descrição da decisão]
-    
+    Campo E-mail: em nosso projeto optamos por essa campo, pois caso precisemos informa algo ao usuário
+teremos o seu contato.
+
+Campo Senha: colocomos essa campo para que o usuário tenha privacidade e segurança sobre seu login.
+
+Campo Nome: optamos por esse campo para ter informações a mais sobre o cliente.
+
+Campo Rua/Avenida/Alameda, Bairro, Cidade, Estado, Número da casa: optamos por esses campos para que 
+sua localizaçõa seje clara e facilite ao sistema encontrar pontos de ônibus mais próximos ao usuário.
+
+Campo Número do ônibus: esse campo foi colocado para que possamos melhor indentificar o ônibus.
+
+Campo Número da linha: optamos por esse campo pois iremos relacioná-lo com o itinerário, e também
+para o usuário indentificar o ônibus.
+
+Compo Horário de saída e chegada: Optamos por esse campo para facilitar ao sistema de mostrar ao usuário
+o tempo que falta pra tal ônibus chegar a tal ponto de ônibus.
+
+Campo Itinerário: colocamos esse campo para que o usuário tenah acesso ao caminho que tal ônibus pecorre,  
+para melhor indentificar o horário do ônibus, e para dizer quais pontos esse ônibus passa.
+
+Campo Número do ponto: serve para melhor indentificarmos cada ponto de ônibus, e ralacioná-lo com os números dos ônibus
+que ali passam.
+
+Campo Empresa doo ônibus: optamos por esse campo para que o usuário saiba qual empresa atua em cada ponto de ônibos.
+
+Campo Rua/Avenida/Alameda, Bairro, Cidade, Estado: colocamos esse campo para que o ponto de ônibus seja 
+melhor indentificado pelo sistema.
+
     EXEMPLO:
     a) Campo endereço: em nosso projeto optamos por um campo multivalorado e composto, pois a empresa
     pode possuir para cada departamento mais de uma localização...
