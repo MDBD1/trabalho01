@@ -118,8 +118,74 @@ bairro, cidade e estado respectivamente.<br>
 ### 6 MODELO LÓGICO<br>
    ![Modelo lógico](https://github.com/MDBD1/trabalho01/blob/master/imagens/2018-07-02.png)
 ### 7 MODELO FÍSICO<br>
-        a) inclusão das instruções de criacão das estruturas DDL
-        (criação de tabelas, alterações, etc..)          
+        /* Lógico_1: */
+
+CREATE TABLE USUARIO (
+    email varchar(80) PRIMARY KEY,
+    senha varchar(80),
+    nome varchar(80),
+    n_da_casa varchar(80),
+    rua_avenida  varchar(255),
+    bairro varchar(100),
+    estado varchar(100),
+    cidade varchar(100)
+);
+
+CREATE TABLE ONIBUS (
+    n_onibus int PRIMARY KEY,
+    n_linha int,
+    saida time,
+    chegada time,
+    itinerario varchar(255)
+);
+
+CREATE TABLE PONTO_DE_ONIBUS (
+    n_ponto int PRIMARY KEY,
+    tipo_de_onibus varchar(80),
+    cidade varchar(100),
+    rua_avenida varchar(255),
+    bairro varchar(100),
+    estado varchar(100)
+);
+
+CREATE TABLE ENTRADA (
+);
+
+CREATE TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS (
+    FK_USUARIO_email varchar(80),
+    FK_PONTO_DE_ONIBUS_n_ponto int,
+    FK_ONIBUS_n_onibus int
+);
+
+CREATE TABLE ponto_onibus (
+    FK_ONIBUS_n_onibus int,
+    FK_PONTO_DE_ONIBUS_n_ponto int
+);
+ 
+ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_0
+    FOREIGN KEY (FK_USUARIO_email)
+    REFERENCES USUARIO (email)
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+ 
+ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_1
+    FOREIGN KEY (FK_PONTO_DE_ONIBUS_n_ponto)
+    REFERENCES PONTO_DE_ONIBUS (n_ponto)
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+ 
+ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_2
+    FOREIGN KEY (FK_ONIBUS_n_onibus)
+    REFERENCES ONIBUS (n_onibus)
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+ 
+ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_0
+    FOREIGN KEY (FK_ONIBUS_n_onibus)
+    REFERENCES ONIBUS (n_onibus)
+    ON DELETE SET NULL ON UPDATE CASCADE;
+ 
+ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_1
+    FOREIGN KEY (FK_PONTO_DE_ONIBUS_n_ponto)
+    REFERENCES PONTO_DE_ONIBUS (n_ponto)
+    ON DELETE SET NULL ON UPDATE CASCADE;      
         
 ### 8 INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
