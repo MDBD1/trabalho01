@@ -128,15 +128,15 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 ## Marco de Entrega 02 em: (16/06/2018)<br>
 ### ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO SEMESTRAL (Mínimo 6 e Máximo 10)<br>
 <br>
-    Data de Entrega: (30/06/2018)
-<br>
-#### 9.7 CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
-#### 9.8 CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
-#### 9.9 CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
+   #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
+
+#### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
+#### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
-#### 9.10 SUBCONSULTAS (Mínimo 3)<br>
-#### 9.11 LISTA DE CODIGOS DAS FUNÇÕES E TRIGGERS<br>
+#### 9.10	SUBCONSULTAS (Mínimo 3)<br>
+
+#### 9.11	LISTA DE CODIGOS DAS FUNÇÕES E TRIGGERS<br>
         Detalhamento sobre funcionalidade de cada código.
         a) Objetivo
         b) Código do objeto (função/trigger)
