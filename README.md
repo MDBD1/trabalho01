@@ -118,7 +118,7 @@ bairro, cidade e estado respectivamente.<br>
 ### 6 MODELO LÓGICO<br>
    ![Modelo lógico](https://github.com/MDBD1/trabalho01/blob/master/imagens/2018-07-02.png)
 ### 7 MODELO FÍSICO<br>
-        /* Lógico_1: */
+       
 
 CREATE TABLE USUARIO (
     email varchar(80) PRIMARY KEY,
