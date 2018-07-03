@@ -42,7 +42,7 @@ número do ponto de ônibus.
     e deve ser criada antes do modelo conceitual
     c) Após criada esta tabela não deve ser modificada, pois será comparada com os resultados finais na conclusão do trabalho
     
-![Exemplo de Tabela de dados da Empresa Devcom](https://github.com/discipint/trabalho01/blob/master/arquivos/TabelaEmpresaDevCom_sample.xlsx?raw=true "Tabela - Empresa Devcom")
+![Tabela de dados da Empresa Neworld](https://github.com/MDBD1/trabalho01/blob/master/arquivos/TabelaEmpresaNeworld2.xlsx raw=true "Tabela - Empresa Neworld")
     
 >## Marco de Entrega 01 em: (24/03/2018)<br>
 ### 5.MODELO CONCEITUAL<br>
@@ -511,10 +511,10 @@ select * from acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS;<br>
 
 #### 9.2 CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
-select * from usuario where cidade='Serra';
-select nome from usuario where n_da_casa>'1000';
-select * from usuario where bairro<>'Valparaíso';
-select * from onibus where n_onibus=234567;
+select * from usuario where cidade='Serra';<br>
+select nome from usuario where n_da_casa>'1000';<br>
+select * from usuario where bairro<>'Valparaíso';<br>
+select * from onibus where n_onibus=234567;<br>
 
 <br>
 #### 9.3 CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)<br>
