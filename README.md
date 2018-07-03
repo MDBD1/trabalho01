@@ -522,19 +522,19 @@ select * from onibus where n_onibus=234567;
     
 a)<br>
 
-select estado from usuario where n_da_casa>100 and n_da_casa<1000;
-select cidade from usuario where estado='Espírito Santo' or estado='Bahia';
-select n_onibus from onibus where saida='12:00:00' and chegada='12:30:00';
-select * from ponto_de_onibus where n_ponto is not null;
-select * from onibus where n_onibus>500000 and n_linha>400 or n_onibus<200000 and n_linha<200;
+select estado from usuario where n_da_casa>100 and n_da_casa<1000;<br>
+select cidade from usuario where estado='Espírito Santo' or estado='Bahia';<br>
+select n_onibus from onibus where saida='12:00:00' and chegada='12:30:00';<br>
+select * from ponto_de_onibus where n_ponto is not null;<br>
+select * from onibus where n_onibus>500000 and n_linha>400 or n_onibus<200000 and n_linha<200;<br>
 
 <br>
 
 b)<br>
 
-select n_da_casa+1000 from usuario where n_da_casa<1000;
-select n_onibus%2 from onibus where n_onibus>200000;
-select n_linha*1.1 from ponto_de_onibus;
+select n_da_casa+1000 from usuario where n_da_casa<1000;<br>
+select n_onibus%2 from onibus where n_onibus>200000;<br>
+select n_linha*1.1 from ponto_de_onibus;<br>
 <br>
 
 #### 9.4 CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
