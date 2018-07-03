@@ -498,7 +498,7 @@ select * from acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS;
 #### 9.2 CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
 select * from usuario where cidade='Serra';
-select nome from usuario where n_da_casa>1000;
+select nome from usuario where n_da_casa>'1000';
 select * from usuario where bairro<>'Valparaíso';
 select * from onibus where n_onibus=234567;
 
