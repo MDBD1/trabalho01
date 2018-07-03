@@ -508,6 +508,7 @@ select * from acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS;<br>
 
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newisso.png)<br>
 <br>
+
 #### 9.2 CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
 select * from usuario where cidade='Serra';
@@ -516,10 +517,8 @@ select * from usuario where bairro<>'Valparaíso';
 select * from onibus where n_onibus=234567;
 
 <br>
-#### 9.3 CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
-    b) Criar no mínimo 3 consultas com operadores aritméticos
-    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+#### 9.3 CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)<br>
+  
     
 a)<br>
 
