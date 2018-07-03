@@ -489,15 +489,24 @@ drop table PONTO_DE_ONIBUS;
 #### 9.1 CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
 select * from usuario;<br>
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newusuario.png)
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newusuario.png)<br>
+
 select * from onibus;<br>
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newonibus.png)
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newonibus.png)<br>
+
 select * from ponto_de_onibus;<br>
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newponto_de_onibus.png)
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newponto_de_onibus.png)<br>
+
 select * from ponto_onibus;<br>
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newponto_onibus.png)
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newponto_onibus.png)<br>
+
 select * from acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS;<br>
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newisso.png)
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newisso.png)<br>
 <br>
 #### 9.2 CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
