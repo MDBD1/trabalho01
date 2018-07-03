@@ -191,15 +191,15 @@ ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_1
         b) formato .SQL
         
 insert into USUARIO(email,senha,nome,rua_avenida, bairro, cidade, estado, n_da_casa)
-values ('fernadasilva@email.com','tuyghj678','Fernanda da Silva', 'Avenida Fernando Ferrari','Goiabeiras','Vitória','Espírito Santo',56),('mariaclara@email.com','sckopdnefj8','Maria Clara dos Santos','Emanuel Ribeiro','Laranjeiras','Serra','Espírito Santo' 
-,1600),('robertaOliveira@email.com','qreytjukfd','Roberta Oliveira','Garrafa Furada','Churrasco','Vila Velha','Espírito Santo',1601),
-('dsgfdhsj@email.com','bibibibibi','Mark Pereira','Batata','Carne Moida','Viana','Espírito Santo' ,1602),
-('blablabla@email.com','qwer1234','Beatris dos Santos','Reta da penha','Patinho','São Paulo','São Paulo',1603),
-('lkdaqwe@email.com','123890iop','Jackson Wang','Melancia','Lombo','Cariacica','Espírito Santo',1604),
-('weakSempre@email.com','universo123','Karen Bachini','Abóbora','Bife','Serra','Espírito Santo',1605),
-('bliblipimpim@gmail','kkj1234','Maria Carolina Da Silva','Abacate','Picanha','Serra','Espírito Santo',1606),
-('guiSilveira@email.com','6543212','Guilherme Silveira','Gato Preto','Tigre',' Vitória da Conquista','Bahia',1607),
-('jubilix@gmail.com','coisalinda','Juliana Vasconcelos','Rua Anchieta','Valparaíso','Serra','Espírito Santo', 50);
+values ('fernadasilva@email.com','tuyghj678','Fernanda da Silva', 'Avenida Fernando Ferrari','Goiabeiras','Vitória','Espírito Santo','56'),('mariaclara@email.com','sckopdnefj8','Maria Clara dos Santos','Emanuel Ribeiro','Laranjeiras','Serra','Espírito Santo' 
+,'1600'),('robertaOliveira@email.com','qreytjukfd','Roberta Oliveira','Garrafa Furada','Churrasco','Vila Velha','Espírito Santo','1601'),
+('dsgfdhsj@email.com','bibibibibi','Mark Pereira','Batata','Carne Moida','Viana','Espírito Santo' ,'1602'),
+('blablabla@email.com','qwer1234','Beatris dos Santos','Reta da penha','Patinho','São Paulo','São Paulo','1603'),
+('lkdaqwe@email.com','123890iop','Jackson Wang','Melancia','Lombo','Cariacica','Espírito Santo','1604'),
+('weakSempre@email.com','universo123','Karen Bachini','Abóbora','Bife','Serra','Espírito Santo','1605'),
+('bliblipimpim@gmail','kkj1234','Maria Carolina Da Silva','Abacate','Picanha','Serra','Espírito Santo','1606'),
+('guiSilveira@email.com','6543212','Guilherme Silveira','Gato Preto','Tigre',' Vitória da Conquista','Bahia','1607'),
+('jubilix@gmail.com','coisalinda','Juliana Vasconcelos','Rua Anchieta','Valparaíso','Serra','Espírito Santo', '50');
 
 insert into onibus(n_onibus,n_linha,saida,chegada,itinerario)
 values (234567, 400,'12:00:00','12:30:00','Avenida Paulo Pereira Gomes'),(534285, 289,'13:10:00','13:50:00','Rua Anchieta'),
@@ -309,15 +309,15 @@ ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_1
     ON DELETE SET NULL ON UPDATE CASCADE; 
     
 insert into USUARIO(email,senha,nome,rua_avenida, bairro, cidade, estado, n_da_casa)
-values ('fernadasilva@email.com','tuyghj678','Fernanda da Silva', 'Avenida Fernando Ferrari','Goiabeiras','Vitória','Espírito Santo',56),('mariaclara@email.com','sckopdnefj8','Maria Clara dos Santos','Emanuel Ribeiro','Laranjeiras','Serra','Espírito Santo' 
-,1600),('robertaOliveira@email.com','qreytjukfd','Roberta Oliveira','Garrafa Furada','Churrasco','Vila Velha','Espírito Santo',1601),
-('dsgfdhsj@email.com','bibibibibi','Mark Pereira','Batata','Carne Moida','Viana','Espírito Santo' ,1602),
-('blablabla@email.com','qwer1234','Beatris dos Santos','Reta da penha','Patinho','São Paulo','São Paulo',1603),
-('lkdaqwe@email.com','123890iop','Jackson Wang','Melancia','Lombo','Cariacica','Espírito Santo',1604),
-('weakSempre@email.com','universo123','Karen Bachini','Abóbora','Bife','Serra','Espírito Santo',1605),
-('bliblipimpim@gmail','kkj1234','Maria Carolina Da Silva','Abacate','Picanha','Serra','Espírito Santo',1606),
-('guiSilveira@email.com','6543212','Guilherme Silveira','Gato Preto','Tigre',' Vitória da Conquista','Bahia',1607),
-('jubilix@gmail.com','coisalinda','Juliana Vasconcelos','Rua Anchieta','Valparaíso','Serra','Espírito Santo', 50);
+values ('fernadasilva@email.com','tuyghj678','Fernanda da Silva', 'Avenida Fernando Ferrari','Goiabeiras','Vitória','Espírito Santo','56'),('mariaclara@email.com','sckopdnefj8','Maria Clara dos Santos','Emanuel Ribeiro','Laranjeiras','Serra','Espírito Santo' 
+,'1600'),('robertaOliveira@email.com','qreytjukfd','Roberta Oliveira','Garrafa Furada','Churrasco','Vila Velha','Espírito Santo','1601'),
+('dsgfdhsj@email.com','bibibibibi','Mark Pereira','Batata','Carne Moida','Viana','Espírito Santo' ,'1602'),
+('blablabla@email.com','qwer1234','Beatris dos Santos','Reta da penha','Patinho','São Paulo','São Paulo','1603'),
+('lkdaqwe@email.com','123890iop','Jackson Wang','Melancia','Lombo','Cariacica','Espírito Santo','1604'),
+('weakSempre@email.com','universo123','Karen Bachini','Abóbora','Bife','Serra','Espírito Santo','1605'),
+('bliblipimpim@gmail','kkj1234','Maria Carolina Da Silva','Abacate','Picanha','Serra','Espírito Santo','1606'),
+('guiSilveira@email.com','6543212','Guilherme Silveira','Gato Preto','Tigre',' Vitória da Conquista','Bahia','1607'),
+('jubilix@gmail.com','coisalinda','Juliana Vasconcelos','Rua Anchieta','Valparaíso','Serra','Espírito Santo', '50');
 
 insert into onibus(n_onibus,n_linha,saida,chegada,itinerario)
 values (234567, 400,'12:00:00','12:30:00','Avenida Paulo Pereira Gomes'),(534285, 289,'13:10:00','13:50:00','Rua Anchieta'),
@@ -430,15 +430,15 @@ ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_1
     ON DELETE SET NULL ON UPDATE CASCADE; 
     
 insert into USUARIO(email,senha,nome,rua_avenida, bairro, cidade, estado, n_da_casa)
-values ('fernadasilva@email.com','tuyghj678','Fernanda da Silva', 'Avenida Fernando Ferrari','Goiabeiras','Vitória','Espírito Santo',56),('mariaclara@email.com','sckopdnefj8','Maria Clara dos Santos','Emanuel Ribeiro','Laranjeiras','Serra','Espírito Santo' 
-,1600),('robertaOliveira@email.com','qreytjukfd','Roberta Oliveira','Garrafa Furada','Churrasco','Vila Velha','Espírito Santo',1601),
-('dsgfdhsj@email.com','bibibibibi','Mark Pereira','Batata','Carne Moida','Viana','Espírito Santo' ,1602),
-('blablabla@email.com','qwer1234','Beatris dos Santos','Reta da penha','Patinho','São Paulo','São Paulo',1603),
-('lkdaqwe@email.com','123890iop','Jackson Wang','Melancia','Lombo','Cariacica','Espírito Santo',1604),
-('weakSempre@email.com','universo123','Karen Bachini','Abóbora','Bife','Serra','Espírito Santo',1605),
-('bliblipimpim@gmail','kkj1234','Maria Carolina Da Silva','Abacate','Picanha','Serra','Espírito Santo',1606),
-('guiSilveira@email.com','6543212','Guilherme Silveira','Gato Preto','Tigre',' Vitória da Conquista','Bahia',1607),
-('jubilix@gmail.com','coisalinda','Juliana Vasconcelos','Rua Anchieta','Valparaíso','Serra','Espírito Santo', 50);
+values ('fernadasilva@email.com','tuyghj678','Fernanda da Silva', 'Avenida Fernando Ferrari','Goiabeiras','Vitória','Espírito Santo','56'),('mariaclara@email.com','sckopdnefj8','Maria Clara dos Santos','Emanuel Ribeiro','Laranjeiras','Serra','Espírito Santo' 
+,'1600'),('robertaOliveira@email.com','qreytjukfd','Roberta Oliveira','Garrafa Furada','Churrasco','Vila Velha','Espírito Santo','1601'),
+('dsgfdhsj@email.com','bibibibibi','Mark Pereira','Batata','Carne Moida','Viana','Espírito Santo' ,'1602'),
+('blablabla@email.com','qwer1234','Beatris dos Santos','Reta da penha','Patinho','São Paulo','São Paulo','1603'),
+('lkdaqwe@email.com','123890iop','Jackson Wang','Melancia','Lombo','Cariacica','Espírito Santo','1604'),
+('weakSempre@email.com','universo123','Karen Bachini','Abóbora','Bife','Serra','Espírito Santo','1605'),
+('bliblipimpim@gmail','kkj1234','Maria Carolina Da Silva','Abacate','Picanha','Serra','Espírito Santo','1606'),
+('guiSilveira@email.com','6543212','Guilherme Silveira','Gato Preto','Tigre',' Vitória da Conquista','Bahia','1607'),
+('jubilix@gmail.com','coisalinda','Juliana Vasconcelos','Rua Anchieta','Valparaíso','Serra','Espírito Santo', '50');
 
 insert into onibus(n_onibus,n_linha,saida,chegada,itinerario)
 values (234567, 400,'12:00:00','12:30:00','Avenida Paulo Pereira Gomes'),(534285, 289,'13:10:00','13:50:00','Rua Anchieta'),
