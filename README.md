@@ -449,7 +449,21 @@ drop table ponto_onibus;
 ### 9 TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1 CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+
+select * from usuario;
+select * from onibus;
+select * from ponto_de_onibus;
+select * from ponto_onibus;
+
+<br>
 #### 9.2 CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+
+select * from usuario where cidade='Serra';
+select nome from usuario where n_da_casa>1000;
+select * from usuario where bairro<>'Valparaíso';
+select * from onibus where n_onibus=234567;
+
+<br>
 #### 9.3 CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos
