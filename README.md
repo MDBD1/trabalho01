@@ -489,6 +489,7 @@ drop table PONTO_DE_ONIBUS;
 #### 9.1 CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
 select * from usuario;
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newusuario.png)
 select * from onibus;
 select * from ponto_de_onibus;
 select * from ponto_onibus;
