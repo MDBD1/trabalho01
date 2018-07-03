@@ -474,11 +474,12 @@ values ('fernadasilva@email.com',128937,234567),
 ('guiSilveira@email.com',123090,12345),
 ('jubilix@gmail.com',4893095,64321);
 
+drop table acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS;
+drop table ponto_onibus;
 drop table USUARIO;
 drop table ONIBUS;
 drop table PONTO_DE_ONIBUS;
-drop table acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS;
-drop table ponto_onibus;
+
 
   
   
