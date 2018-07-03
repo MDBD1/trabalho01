@@ -220,9 +220,8 @@ values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito S
 (123090,'Transcol','Avenida Luciano das Neves','Itapuã','Vila Velha','Espírito Santo'),
 (4893095,'Seletivo','Avenida Guarapari','Santa Luzia','Serra','Espírito Santo');
 
-insert into ponto_onibus(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
-(785444,96543),(45689,1006),(978678,12456)(12345,123090),(64321,4893095);
-
+insert into ponto_onibus(FK_ONIBUS_n_onibus,FK_PONTO_DE_ONIBUS_n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
+(785444,96543),(45689,1006),(978678,12456),(12345,123090),(64321,4893095);
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
         a) Junção dos scripts anteriores em um único script
         (create para tabelas e estruturas de dados + dados a serem inseridos)
@@ -325,9 +324,8 @@ values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito S
 (123090,'Transcol','Avenida Luciano das Neves','Itapuã','Vila Velha','Espírito Santo'),
 (4893095,'Seletivo','Avenida Guarapari','Santa Luzia','Serra','Espírito Santo');
 
-insert into ponto_onibus(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
-(785444,96543),(45689,1006),(978678,12456)(12345,123090),(64321,4893095);
-
+insert into ponto_onibus(FK_ONIBUS_n_onibus,FK_PONTO_DE_ONIBUS_n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
+(785444,96543),(45689,1006),(978678,12456),(12345,123090),(64321,4893095);
         
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
         a) Junção dos scripts anteriores em um único script
@@ -433,13 +431,12 @@ values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito S
 (123090,'Transcol','Avenida Luciano das Neves','Itapuã','Vila Velha','Espírito Santo'),
 (4893095,'Seletivo','Avenida Guarapari','Santa Luzia','Serra','Espírito Santo');
 
-insert into ponto_onibus(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
-(785444,96543),(45689,1006),(978678,12456)(12345,123090),(64321,4893095);
+insert into ponto_onibus(FK_ONIBUS_n_onibus,FK_PONTO_DE_ONIBUS_n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
+(785444,96543),(45689,1006),(978678,12456),(12345,123090),(64321,4893095);
 
 drop table USUARIO;
 drop table ONIBUS;
 drop table PONTO_DE_ONIBUS;
-drop table ENTRADA;
 drop table acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS;
 drop table ponto_onibus;
 
@@ -468,6 +465,22 @@ select * from onibus where n_onibus=234567;
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+    
+a)<br>
+
+select estado from usuario where n_da_casa>100 and n_da_casa<1000;
+select cidade from usuario where estado='Espírito Santo' or estado='Bahia';
+select n_onibus from onibus where saida='12:00:00' and chegada='12:30:00';
+select * from ponto_de_onibus where n_ponto is not null;
+select * from onibus where n_onibus>500000 and n_linha>400 or n_onibus<200000 and n_linha<200;
+
+<br>
+
+b)<br>
+
+sele
+<br>
+
 #### 9.4 CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
     b) Criar uma consulta para cada tipo de função data apresentada.
