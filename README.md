@@ -222,6 +222,20 @@ values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito S
 
 insert into ponto_onibus(FK_ONIBUS_n_onibus,FK_PONTO_DE_ONIBUS_n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
 (785444,96543),(45689,1006),(978678,12456),(12345,123090),(64321,4893095);
+
+insert into acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS( FK_USUARIO_email,FK_PONTO_DE_ONIBUS_n_ponto,FK_ONIBUS_n_onibus)
+values ('fernadasilva@email.com',128937,234567),
+('mariaclara@email.com',12345,534285),
+('robertaOliveira@email.com',87654,123454),
+('dsgfdhsj@email.com',57687,876557),
+('blablabla@email.com',53034,645323),
+('lkdaqwe@email.com',96543,785444),
+('weakSempre@email.com',1006,45689),
+('bliblipimpim@gmail',12456,978678),
+('guiSilveira@email.com',123090,12345),
+('jubilix@gmail.com',4893095,64321);
+
+<br>
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
         a) Junção dos scripts anteriores em um único script
         (create para tabelas e estruturas de dados + dados a serem inseridos)
@@ -326,6 +340,20 @@ values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito S
 
 insert into ponto_onibus(FK_ONIBUS_n_onibus,FK_PONTO_DE_ONIBUS_n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
 (785444,96543),(45689,1006),(978678,12456),(12345,123090),(64321,4893095);
+
+insert into acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS( FK_USUARIO_email,FK_PONTO_DE_ONIBUS_n_ponto,FK_ONIBUS_n_onibus)
+values ('fernadasilva@email.com',128937,234567),
+('mariaclara@email.com',12345,534285),
+('robertaOliveira@email.com',87654,123454),
+('dsgfdhsj@email.com',57687,876557),
+('blablabla@email.com',53034,645323),
+('lkdaqwe@email.com',96543,785444),
+('weakSempre@email.com',1006,45689),
+('bliblipimpim@gmail',12456,978678),
+('guiSilveira@email.com',123090,12345),
+('jubilix@gmail.com',4893095,64321);
+
+<br>
         
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
         a) Junção dos scripts anteriores em um único script
@@ -434,6 +462,18 @@ values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito S
 insert into ponto_onibus(FK_ONIBUS_n_onibus,FK_PONTO_DE_ONIBUS_n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
 (785444,96543),(45689,1006),(978678,12456),(12345,123090),(64321,4893095);
 
+insert into acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS( FK_USUARIO_email,FK_PONTO_DE_ONIBUS_n_ponto,FK_ONIBUS_n_onibus)
+values ('fernadasilva@email.com',128937,234567),
+('mariaclara@email.com',12345,534285),
+('robertaOliveira@email.com',87654,123454),
+('dsgfdhsj@email.com',57687,876557),
+('blablabla@email.com',53034,645323),
+('lkdaqwe@email.com',96543,785444),
+('weakSempre@email.com',1006,45689),
+('bliblipimpim@gmail',12456,978678),
+('guiSilveira@email.com',123090,12345),
+('jubilix@gmail.com',4893095,64321);
+
 drop table USUARIO;
 drop table ONIBUS;
 drop table PONTO_DE_ONIBUS;
@@ -451,6 +491,7 @@ select * from usuario;
 select * from onibus;
 select * from ponto_de_onibus;
 select * from ponto_onibus;
+select * from acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS;
 
 <br>
 #### 9.2 CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
@@ -478,7 +519,9 @@ select * from onibus where n_onibus>500000 and n_linha>400 or n_onibus<200000 an
 
 b)<br>
 
-sele
+select n_da_casa+1000 from usuario where n_da_casa<1000;
+select n_onibus%2 from onibus where n_onibus>200000;
+select n_linha*1.1 from ponto_de_onibus;
 <br>
 
 #### 9.4 CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
