@@ -488,13 +488,16 @@ drop table PONTO_DE_ONIBUS;
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1 CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
-select * from usuario;
+select * from usuario;<br>
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newusuario.png)
-select * from onibus;
-select * from ponto_de_onibus;
-select * from ponto_onibus;
-select * from acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS;
-
+select * from onibus;<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newonibus.png)
+select * from ponto_de_onibus;<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newponto_de_onibus.png)
+select * from ponto_onibus;<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newponto_onibus.png)
+select * from acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS;<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newisso.png)
 <br>
 #### 9.2 CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
