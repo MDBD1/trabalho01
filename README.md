@@ -148,8 +148,6 @@ CREATE TABLE PONTO_DE_ONIBUS (
     estado varchar(100)
 );
 
-CREATE TABLE ENTRADA (
-);
 
 CREATE TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS (
     FK_USUARIO_email varchar(80),
@@ -210,7 +208,7 @@ values (234567, 400,'12:00:00','12:30:00','Avenida Paulo Pereira Gomes'),(534285
 (45689,	789,'10:10:00','11:40:00','Civit ll'),(978678,500,'11:55:00','12:55:00','Avenida João Palácio'),
 (12345,	121,'12:40:00','13:45:00','Avenida Américo Buiaz'),(64321, 560,'11:52:00','14:15:00','Avenida Guarapari');
 
-insert into ponto_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
+insert into ponto_de_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
 values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito Santo'),
 (12345,'Transcol','Avenida Fernando Ferrari','Jardim da Penha','Vitória','Espírito Santo'),
 (87654,'Transcol','Avenida Eudes Scherrer de Souza','Laranjeiras','Serra','Espírito Santo'),
@@ -222,7 +220,7 @@ values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito S
 (123090,'Transcol','Avenida Luciano das Neves','Itapuã','Vila Velha','Espírito Santo'),
 (4893095,'Seletivo','Avenida Guarapari','Santa Luzia','Serra','Espírito Santo');
 
-insert into onibus_ponto(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
+insert into ponto_onibus(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
 (785444,96543),(45689,1006),(978678,12456)(12345,123090),(64321,4893095);
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
@@ -260,8 +258,6 @@ CREATE TABLE PONTO_DE_ONIBUS (
     estado varchar(100)
 );
 
-CREATE TABLE ENTRADA (
-);
 
 CREATE TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS (
     FK_USUARIO_email varchar(80),
@@ -317,7 +313,7 @@ values (234567, 400,'12:00:00','12:30:00','Avenida Paulo Pereira Gomes'),(534285
 (45689,	789,'10:10:00','11:40:00','Civit ll'),(978678,500,'11:55:00','12:55:00','Avenida João Palácio'),
 (12345,	121,'12:40:00','13:45:00','Avenida Américo Buiaz'),(64321, 560,'11:52:00','14:15:00','Avenida Guarapari');
 
-insert into ponto_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
+insert into ponto_de_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
 values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito Santo'),
 (12345,'Transcol','Avenida Fernando Ferrari','Jardim da Penha','Vitória','Espírito Santo'),
 (87654,'Transcol','Avenida Eudes Scherrer de Souza','Laranjeiras','Serra','Espírito Santo'),
@@ -329,7 +325,7 @@ values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito S
 (123090,'Transcol','Avenida Luciano das Neves','Itapuã','Vila Velha','Espírito Santo'),
 (4893095,'Seletivo','Avenida Guarapari','Santa Luzia','Serra','Espírito Santo');
 
-insert into onibus_ponto(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
+insert into ponto_onibus(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
 (785444,96543),(45689,1006),(978678,12456)(12345,123090),(64321,4893095);
 
         
@@ -369,8 +365,7 @@ CREATE TABLE PONTO_DE_ONIBUS (
     estado varchar(100)
 );
 
-CREATE TABLE ENTRADA (
-);
+
 
 CREATE TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS (
     FK_USUARIO_email varchar(80),
@@ -426,7 +421,7 @@ values (234567, 400,'12:00:00','12:30:00','Avenida Paulo Pereira Gomes'),(534285
 (45689,	789,'10:10:00','11:40:00','Civit ll'),(978678,500,'11:55:00','12:55:00','Avenida João Palácio'),
 (12345,	121,'12:40:00','13:45:00','Avenida Américo Buiaz'),(64321, 560,'11:52:00','14:15:00','Avenida Guarapari');
 
-insert into ponto_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
+insert into ponto_de_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
 values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito Santo'),
 (12345,'Transcol','Avenida Fernando Ferrari','Jardim da Penha','Vitória','Espírito Santo'),
 (87654,'Transcol','Avenida Eudes Scherrer de Souza','Laranjeiras','Serra','Espírito Santo'),
@@ -438,7 +433,7 @@ values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito S
 (123090,'Transcol','Avenida Luciano das Neves','Itapuã','Vila Velha','Espírito Santo'),
 (4893095,'Seletivo','Avenida Guarapari','Santa Luzia','Serra','Espírito Santo');
 
-insert into onibus_ponto(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
+insert into ponto_onibus(n_onibus,n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
 (785444,96543),(45689,1006),(978678,12456)(12345,123090),(64321,4893095);
 
 drop table USUARIO;
