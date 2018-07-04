@@ -577,6 +577,10 @@ delete from ponto_de_onibus where bairro='Rosário de Fátima';<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
         
+a)<br>
+select nome,n_onibus,n_ponto from usuario,onibus,ponto_de_onibus order by n_ponto;
+<br>
+        
 ## Marco de Entrega 02 em: (16/06/2018)<br>
 ### ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO SEMESTRAL (Mínimo 6 e Máximo 10)<br>
 <br>
