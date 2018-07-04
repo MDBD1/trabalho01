@@ -87,7 +87,7 @@ que ali passam.
 
 * Campo Rua/Avenida/Alameda, Bairro, Cidade, Estado: colocamos esse campo para que o ponto de ônibus seja 
 melhor indentificado pelo sistema.
-
+* Não não fizemos o tópico 9.4 letra b, pois o nosso trabalho não precisa da informação data.
     
 #### 5.3 DESCRIÇÃO DOS DADOS
     [objeto]: [descrição do objeto]
@@ -512,7 +512,7 @@ select * from acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS;<br>
 #### 9.2 CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
 select * from usuario where cidade='Serra';<br>
-select nome from usuario where n_da_casa>'1000';<br>
+select nome from usuario where n_da_casa='1601';<br>
 select * from usuario where bairro<>'Valparaíso';<br>
 select * from onibus where n_onibus=234567;<br>
 <br>
@@ -522,7 +522,7 @@ select * from onibus where n_onibus=234567;<br>
     
 a)<br>
 
-select estado from usuario where n_da_casa>100 and n_da_casa<1000;<br>
+select estado from usuario where estado='Espírito Santo' and n_da_casa='50';<br>
 select cidade from usuario where estado='Espírito Santo' or estado='Bahia';<br>
 select n_onibus from onibus where saida='12:00:00' and chegada='12:30:00';<br>
 select * from ponto_de_onibus where n_ponto is not null;<br>
@@ -532,18 +532,47 @@ select * from onibus where n_onibus>500000 and n_linha>400 or n_onibus<200000 an
 
 b)<br>
 
-select n_da_casa+1000 from usuario where n_da_casa<1000;<br>
+select n_linha+1000 from onibus where n_onibus<60000;<br>
 select n_onibus%2 from onibus where n_onibus>200000;<br>
 select n_linha*1.1 from ponto_de_onibus;<br>
 <br>
+c)
 
+SELECT * FROM usuario as user WHERE nome LIKE 'J%';<br>
+SELECT * FROM onibus as bus WHERE bus.n_linha LIKE 'J%' and bus.itinerario='Rua Anchieta';<br>
+SELECT * FROM ponto_de_onibus as pnt WHERE nome LIKE 'J%';<br>
+
+<br>
 #### 9.4 CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
     b) Criar uma consulta para cada tipo de função data apresentada.
 
-    
+a)<br>
+
+select * from usuario where nome like'J%';<br>
+select * from onibus where itinerario like'A%';<br>
+select * from ponto_de_onibus where estado like'S%';<br>
+select * from ponto_de_onibus where estado like'%Paulo';<br>
+select * from usuario where bairro like'L%';<br>
+
+<br>
+
+b)<br>
+
+Nós não fizemos esse tópico, pois o nosso trabalho não precisa da informação data.
+
+<br>
+
 #### 9.5 ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 
+update usuario set nome='Júlia Ferreira' where senha='coisalinda';<br>
+update onibus set n_onibus=908978 where itinerario='Avenida Guarapari';<br>
+update ponto_de_onibus set tipo_de_onibus='Seletivo' where n_ponto=12345;<br>
+
+delete from usuario where n_da_casa='56';<br>
+delete from onibus where n_onibus=234567;<br>
+delete from ponto_de_onibus where bairro='Rosário de Fátima';<br>
+<br>
 #### 9.6 CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
