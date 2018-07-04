@@ -570,6 +570,37 @@ update usuario set nome='Júlia Ferreira' where senha='coisalinda';<br>
 update onibus set saida='11:00:00' where itinerario='Avenida Guarapari';<br>
 update ponto_de_onibus set tipo_de_onibus='Seletivo' where n_ponto=12345;<br>
 
+ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS drop constraint FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_0;
+ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS drop constraint FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_1;
+ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS drop constraint FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_2;
+ALTER TABLE ponto_onibus drop constraint FK_ponto_onibus_0;
+ALTER TABLE ponto_onibus drop constraint FK_ponto_onibus_1;
+
+ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_0
+    FOREIGN KEY (FK_USUARIO_email)
+    REFERENCES USUARIO (email)
+    ON DELETE CASCADE ON UPDATE CASCADE;
+ 
+ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_1
+    FOREIGN KEY (FK_PONTO_DE_ONIBUS_n_ponto)
+    REFERENCES PONTO_DE_ONIBUS (n_ponto)
+    ON DELETE CASCADE ON UPDATE CASCADE;
+ 
+ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_2
+    FOREIGN KEY (FK_ONIBUS_n_onibus)
+    REFERENCES ONIBUS (n_onibus)
+    ON DELETE CASCADE ON UPDATE CASCADE;
+ 
+ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_0
+    FOREIGN KEY (FK_ONIBUS_n_onibus)
+    REFERENCES ONIBUS (n_onibus)
+    ON DELETE CASCADE ON UPDATE CASCADE;
+ 
+ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_1
+    FOREIGN KEY (FK_PONTO_DE_ONIBUS_n_ponto)
+    REFERENCES PONTO_DE_ONIBUS (n_ponto)
+    ON DELETE CASCADE ON UPDATE CASCADE; 
+
 delete from usuario where n_da_casa='56';<br>
 delete from onibus where n_onibus=234567;<br>
 delete from ponto_de_onibus where bairro='Rosário de Fátima';<br>
