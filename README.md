@@ -579,7 +579,19 @@ delete from ponto_de_onibus where bairro='Rosário de Fátima';<br>
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
         
 a)<br>
-select nome,n_onibus,n_ponto from usuario,onibus,ponto_de_onibus order by n_ponto;
+select U.nome,AU.FK_USUARIO_email,O.n_onibus, PDO.tipo_de_onibus, PO.FK_PONTO_DE_ONIBUS_n_ponto  from usuario U
+inner join onibus O on(U.rua_avenida = O.itinerario)
+inner join ponto_de_onibus 	PDO on (O.itinerario = PDO.rua_avenida)
+inner join ponto_onibus PO on (PDO.n_ponto=PO.FK_PONTO_DE_ONIBUS_n_ponto)
+inner join acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS AU on (U.email = AU.FK_USUARIO_email);
+
+<br>
+b)<br>
+
+select U.nome,O.n_onibus, PDO.tipo_de_onibus  from usuario U
+inner join onibus O on(U.rua_avenida = O.itinerario)
+inner join ponto_de_onibus 	PDO on (O.itinerario = PDO.rua_avenida);
+
 <br>
         
 ## Marco de Entrega 02 em: (16/06/2018)<br>
