@@ -87,7 +87,7 @@ que ali passam.
 
 * Campo Rua/Avenida/Alameda, Bairro, Cidade, Estado: colocamos esse campo para que o ponto de ônibus seja 
 melhor indentificado pelo sistema.
-* Não não fizemos o tópico 9.4 letra b, pois o nosso trabalho não precisa da informação data.
+* Nós não fizemos o tópico 9.4 letra b, pois o nosso trabalho não precisa da informação data.
     
 #### 5.3 DESCRIÇÃO DOS DADOS
     [objeto]: [descrição do objeto]
@@ -236,7 +236,7 @@ values ('fernadasilva@email.com',128937,234567),
 ('jubilix@gmail.com',4893095,64321);
 
 <br>
-#### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
+#### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS<br>
         a) Junção dos scripts anteriores em um único script
         (create para tabelas e estruturas de dados + dados a serem inseridos)
         b) Criar um novo banco de dados para testar a restauracao
@@ -534,7 +534,7 @@ b)<br>
 
 select n_linha+1000 from onibus where n_onibus<60000;<br>
 select n_onibus%2 from onibus where n_onibus>200000;<br>
-select n_linha*1.1 from ponto_de_onibus;<br>
+select n_ponto*1.1 from ponto_de_onibus;<br>
 <br>
 c)
 
@@ -543,15 +543,16 @@ SELECT * FROM onibus as bus WHERE bus.n_linha LIKE 'J%' and bus.itinerario='Rua 
 SELECT * FROM ponto_de_onibus as pnt WHERE nome LIKE 'J%';<br>
 
 <br>
-#### 9.4 CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
+#### 9.4 CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12)<br>
     a) Criar outras 5 consultas que envolvam like ou ilike
     b) Criar uma consulta para cada tipo de função data apresentada.
+
 
 a)<br>
 
 select * from usuario where nome like'J%';<br>
 select * from onibus where itinerario like'A%';<br>
-select * from ponto_de_onibus where estado like'S%';<br>
+select * from ponto_de_onibus where estado like'E%';<br>
 select * from ponto_de_onibus where estado like'%Paulo';<br>
 select * from usuario where bairro like'L%';<br>
 
