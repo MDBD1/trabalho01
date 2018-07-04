@@ -538,9 +538,9 @@ select n_ponto*1.1 from ponto_de_onibus;<br>
 <br>
 c)
 
-SELECT * FROM usuario as user WHERE nome LIKE 'J%';<br>
-SELECT * FROM onibus as bus WHERE bus.n_linha LIKE 'J%' and bus.itinerario='Rua Anchieta';<br>
-SELECT * FROM ponto_de_onibus as pnt WHERE nome LIKE 'J%';<br>
+SELECT * FROM usuario U WHERE U.nome LIKE 'J%';<br>
+SELECT * FROM onibus O WHERE O.itinerario='Rua Anchieta';<br>
+SELECT * FROM ponto_de_onibus PDO WHERE PDO.bairro LIKE 'J%';<br>
 
 <br>
 #### 9.4 CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12)<br>
@@ -567,7 +567,7 @@ Nós não fizemos esse tópico, pois o nosso trabalho não precisa da informaç�
 #### 9.5 ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 
 update usuario set nome='Júlia Ferreira' where senha='coisalinda';<br>
-update onibus set n_onibus=908978 where itinerario='Avenida Guarapari';<br>
+update onibus set saida='11:00:00' where itinerario='Avenida Guarapari';<br>
 update ponto_de_onibus set tipo_de_onibus='Seletivo' where n_ponto=12345;<br>
 
 delete from usuario where n_da_casa='56';<br>
