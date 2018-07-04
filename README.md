@@ -42,7 +42,7 @@ número do ponto de ônibus.
     e deve ser criada antes do modelo conceitual
     c) Após criada esta tabela não deve ser modificada, pois será comparada com os resultados finais na conclusão do trabalho
     
-![Tabela de dados da Empresa Neworld](https://github.com/MDBD1/trabalho01/blob/master/arquivos/TabelaEmpresaNeworld2.xlsx raw=true "Tabela - Empresa Neworld")
+![Tabela da Empresa Neworld](https://github.com/MDBD1/trabalho01/blob/master/arquivos/TabelaEmpresaNeworld2.xlsx)
     
 >## Marco de Entrega 01 em: (24/03/2018)<br>
 ### 5.MODELO CONCEITUAL<br>
