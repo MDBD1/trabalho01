@@ -48,7 +48,7 @@ número do ponto de ônibus.
 ### 5.MODELO CONCEITUAL<br>
    
         
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/2018-06-30%20(5).png)
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/2018-07-03%20(1).png)
     
     
     
@@ -116,7 +116,7 @@ bairro, cidade e estado respectivamente.<br>
     
 >## Marco de Entrega 01 em: (12/05/2018)<br>
 ### 6 MODELO LÓGICO<br>
-   ![Modelo lógico](https://github.com/MDBD1/trabalho01/blob/master/imagens/2018-07-02.png)
+   ![Modelo lógico](https://github.com/MDBD1/trabalho01/blob/master/imagens/2018-07-03.png)
 ### 7 MODELO FÍSICO<br>
        
 
