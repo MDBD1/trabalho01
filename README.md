@@ -51,7 +51,6 @@ número do ponto de ônibus.
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/2018-07-03%20(1).png)
     
     
-    
 #### 5.1 Validação do Modelo Conceitual
     [Grupo01]: [Nomes dos que participaram na avaliação]
     [Grupo02]: [Nomes dos que participaram na avaliação]
@@ -512,6 +511,9 @@ select * from acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS;<br>
 #### 9.2 CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
 select * from usuario where cidade='Serra';<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.2select1.png)<br>
+
 select nome from usuario where n_da_casa='1601';<br>
 select * from usuario where bairro<>'Valparaíso';<br>
 select * from onibus where n_onibus=234567;<br>
