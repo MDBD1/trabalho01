@@ -570,8 +570,16 @@ select n_ponto*1.1 from ponto_de_onibus;<br>
 c)
 
 SELECT * FROM usuario U WHERE U.nome LIKE 'J%';<br>
+
+![Alt text]()<br>
+
 SELECT * FROM onibus O WHERE O.itinerario='Rua Anchieta';<br>
+
+![Alt text]()<br>
+
 SELECT * FROM ponto_de_onibus PDO WHERE PDO.bairro LIKE 'J%';<br>
+
+![Alt text]()<br>
 
 <br>
 #### 9.4 CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12)<br>
@@ -582,10 +590,25 @@ SELECT * FROM ponto_de_onibus PDO WHERE PDO.bairro LIKE 'J%';<br>
 a)<br>
 
 select * from usuario where nome like'J%';<br>
+
+![Alt text]()<br>
+
 select * from onibus where itinerario like'A%';<br>
+
+![Alt text]()<br>
+
 select * from ponto_de_onibus where estado like'E%';<br>
+
+![Alt text]()<br>
+
 select * from ponto_de_onibus where estado like'%Paulo';<br>
+
+![Alt text]()<br>
+
 select * from usuario where bairro like'L%';<br>
+
+![Alt text]()<br>
+
 
 <br>
 
@@ -598,8 +621,17 @@ Nós não fizemos esse tópico, pois o nosso trabalho não precisa da informaç�
 #### 9.5 ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 
 update usuario set nome='Júlia Ferreira' where senha='coisalinda';<br>
+
+![Alt text]()<br>
+
 update onibus set saida='11:00:00' where itinerario='Avenida Guarapari';<br>
+
+![Alt text]()<br>
+
 update ponto_de_onibus set tipo_de_onibus='Seletivo' where n_ponto=12345;<br>
+
+![Alt text]()<br>
+
 
 ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS drop constraint FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_0;
 ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS drop constraint FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_1;
@@ -633,8 +665,16 @@ ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_1
     ON DELETE CASCADE ON UPDATE CASCADE; 
 
 delete from usuario where n_da_casa='56';<br>
+
+![Alt text]()<br>
+
 delete from onibus where n_onibus=234567;<br>
+
+![Alt text]()<br>
+
 delete from ponto_de_onibus where bairro='Rosário de Fátima';<br>
+
+![Alt text]()<br>
 <br>
 #### 9.6 CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
@@ -647,12 +687,16 @@ inner join ponto_de_onibus 	PDO on (O.itinerario = PDO.rua_avenida)
 inner join ponto_onibus PO on (PDO.n_ponto=PO.FK_PONTO_DE_ONIBUS_n_ponto)
 inner join acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS AU on (U.email = AU.FK_USUARIO_email);
 
+![Alt text]()<br>
+
 <br>
 b)<br>
 
 select U.nome,O.n_onibus, PDO.tipo_de_onibus  from usuario U
 inner join onibus O on(U.rua_avenida = O.itinerario)
 inner join ponto_de_onibus 	PDO on (O.itinerario = PDO.rua_avenida);
+
+![Alt text]()<br>
 
 <br>
         
