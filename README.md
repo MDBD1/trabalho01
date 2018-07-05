@@ -687,7 +687,7 @@ inner join ponto_de_onibus 	PDO on (O.itinerario = PDO.rua_avenida)
 inner join ponto_onibus PO on (PDO.n_ponto=PO.FK_PONTO_DE_ONIBUS_n_ponto)
 inner join acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS AU on (U.email = AU.FK_USUARIO_email);
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.6selecta.png)<br>
 
 <br>
 b)<br>
@@ -696,7 +696,7 @@ select U.nome,O.n_onibus, PDO.tipo_de_onibus  from usuario U
 inner join onibus O on(U.rua_avenida = O.itinerario)
 inner join ponto_de_onibus 	PDO on (O.itinerario = PDO.rua_avenida);
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.6selectb.png)<br>
 
 <br>
         
