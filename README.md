@@ -531,10 +531,24 @@ select * from onibus where n_onibus=234567;<br>
 a)<br>
 
 select estado from usuario where estado='Espírito Santo' and n_da_casa='50';<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.3select1a.png)<br>
+
 select cidade from usuario where estado='Espírito Santo' or estado='Bahia';<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.3select2a.png)<br>
+
 select n_onibus from onibus where saida='12:00:00' and chegada='12:30:00';<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.3select3a.png)<br>
+
 select * from ponto_de_onibus where n_ponto is not null;<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.3select4a.png)<br>
+
 select * from onibus where n_onibus>500000 and n_linha>400 or n_onibus<200000 and n_linha<200;<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.3select5a.png)<br>
 
 <br>
 
