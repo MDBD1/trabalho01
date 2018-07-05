@@ -622,15 +622,15 @@ Nós não fizemos esse tópico, pois o nosso trabalho não precisa da informaç�
 
 update usuario set nome='Júlia Ferreira' where senha='coisalinda';<br>
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.5update1.png)<br>
 
 update onibus set saida='11:00:00' where itinerario='Avenida Guarapari';<br>
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.5update2.png)<br>
 
 update ponto_de_onibus set tipo_de_onibus='Seletivo' where n_ponto=12345;<br>
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.5update3.png)<br>
 
 
 ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS drop constraint FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_0;
