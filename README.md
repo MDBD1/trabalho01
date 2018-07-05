@@ -666,15 +666,15 @@ ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_1
 
 delete from usuario where n_da_casa='56';<br>
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.5delete1.png)<br>
 
 delete from onibus where n_onibus=234567;<br>
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.5delete2.png)<br>
 
 delete from ponto_de_onibus where bairro='Rosário de Fátima';<br>
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.5delete3.png)<br>
 <br>
 #### 9.6 CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
