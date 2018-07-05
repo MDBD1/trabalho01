@@ -515,8 +515,14 @@ select * from usuario where cidade='Serra';<br>
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.2select1.png)<br>
 
 select nome from usuario where n_da_casa='1601';<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.2select2.png)<br>
+
 select * from usuario where bairro<>'Valparaíso';<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.2select3.png)<br>
+
 select * from onibus where n_onibus=234567;<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.2select4.png)<br>
+
 <br>
 
 #### 9.3 CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)<br>
