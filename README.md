@@ -571,15 +571,15 @@ c)
 
 SELECT * FROM usuario U WHERE U.nome LIKE 'J%';<br>
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.3select1c.png)<br>
 
 SELECT * FROM onibus O WHERE O.itinerario='Rua Anchieta';<br>
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.3select2c.png)<br>
 
 SELECT * FROM ponto_de_onibus PDO WHERE PDO.bairro LIKE 'J%';<br>
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.3select3c.png)<br>
 
 <br>
 #### 9.4 CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12)<br>
