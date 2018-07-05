@@ -591,23 +591,23 @@ a)<br>
 
 select * from usuario where nome like'J%';<br>
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.4select1a.png)<br>
 
 select * from onibus where itinerario like'A%';<br>
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.4select2a.png)<br>
 
 select * from ponto_de_onibus where estado like'E%';<br>
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.4selesct3a.png)<br>
 
 select * from ponto_de_onibus where estado like'%Paulo';<br>
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.4select4a.png)<br>
 
 select * from usuario where bairro like'L%';<br>
 
-![Alt text]()<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.4select5a.png)<br>
 
 
 <br>
