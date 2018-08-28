@@ -48,12 +48,12 @@ número do ponto de ônibus.
 ### 5.MODELO CONCEITUAL<br>
    
         
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/oleoleola.png)
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/brmodeloavalia%C3%A7%C3%A3o.png)
     
     
 #### 5.1 Validação do Modelo Conceitual
-    [Grupo01]: [Nomes dos que participaram na avaliação]
-    [Grupo02]: [Nomes dos que participaram na avaliação]
+    [Biblioteca Virtual]: [Marina Milagres, Gustavo Duntra]
+    [Semafro Up]: [Christian, Gabriel]
 ## Marco de Entrega 01 em: (20/04/2018)<br>
 #### 5.2 DECISÕES DE PROJETO
     [atributo]: [descrição da decisão]
