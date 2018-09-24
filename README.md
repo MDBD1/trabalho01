@@ -48,7 +48,7 @@ número do ponto de ônibus.
 ### 5.MODELO CONCEITUAL<br>
    
         
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/brmodeloavalia%C3%A7%C3%A3o.png)
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/BRMODELO.png)
     
     
 #### 5.1 Validação do Modelo Conceitual
