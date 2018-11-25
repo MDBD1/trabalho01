@@ -117,72 +117,151 @@ bairro, cidade e estado respectivamente.<br>
 ### 6 MODELO LÓGICO<br>
    ![Modelo lógico](https://github.com/MDBD1/trabalho01/blob/master/imagens/ilarilarie.png)
 ### 7 MODELO FÍSICO<br>
-       
 
 CREATE TABLE USUARIO (
-    email varchar(80) PRIMARY KEY,
+    email varchar(80),
     senha varchar(80),
     nome varchar(80),
-    n_da_casa varchar(80),
-    rua_avenida  varchar(255),
-    bairro varchar(100),
-    estado varchar(100),
-    cidade varchar(100)
+    n_da_casa int,
+    codigo serial PRIMARY KEY
 );
 
 CREATE TABLE ONIBUS (
     n_onibus int PRIMARY KEY,
     n_linha int,
-    saida time,
-    chegada time,
-    itinerario varchar(255)
+    itinerario varchar(255),
+    tipo_de_onibus varchar(80)
 );
 
 CREATE TABLE PONTO_DE_ONIBUS (
-    n_ponto int PRIMARY KEY,
-    tipo_de_onibus varchar(80),
-    cidade varchar(100),
-    rua_avenida varchar(255),
-    bairro varchar(100),
-    estado varchar(100)
+    n_ponto int PRIMARY KEY
 );
 
-
-CREATE TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS (
-    FK_USUARIO_email varchar(80),
-    FK_PONTO_DE_ONIBUS_n_ponto int,
-    FK_ONIBUS_n_onibus int
+CREATE TABLE CIDADE (
+    nome varchar(80),
+    codigo int PRIMARY KEY,
+    FK_ESTADO_codigo int
 );
 
-CREATE TABLE ponto_onibus (
-    FK_ONIBUS_n_onibus int,
-    FK_PONTO_DE_ONIBUS_n_ponto int
+CREATE TABLE ESTADO (
+    nome varchar(80),
+    codigo int PRIMARY KEY
+);
+
+CREATE TABLE BAIRRO (
+    nome varchar(80),
+    codigo int PRIMARY KEY,
+    FK_CIDADE_codigo int
+);
+
+CREATE TABLE LOGRADOURO (
+    codigo int PRIMARY KEY,
+    descricao varchar(255),
+    FK_BAIRRO_codigo int
+);
+
+CREATE TABLE NOME_LOGRADOURO (
+    nome varchar(255),
+    FK_LOGRADOURO_codigo int
+);
+
+CREATE TABLE RELA_PONTO_ONIBUS_Relacao_1 (
+    id serial PRIMARY KEY,
+    horario time,
+    ordem serial,
+    fk_ONIBUS_n_onibus int,
+    fk_PONTO_DE_ONIBUS_n_ponto int
+);
+
+CREATE TABLE usu_logradouro (
+    fk_USUARIO_codigo serial,
+    fk_LOGRADOURO_codigo int
+);
+
+CREATE TABLE ponto_logradouro (
+    fk_LOGRADOURO_codigo int,
+    fk_PONTO_DE_ONIBUS_n_ponto int
+);
+
+CREATE TABLE onibus_usuario (
+    fk_USUARIO_codigo serial,
+    fk_ONIBUS_n_onibus int,
+    data DATE
+);
+
+CREATE TABLE ponto_usuario (
+    fk_USUARIO_codigo serial,
+    fk_PONTO_DE_ONIBUS_n_ponto int,
+    data DATE
 );
  
-ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_0
-    FOREIGN KEY (FK_USUARIO_email)
-    REFERENCES USUARIO (email)
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE CIDADE ADD CONSTRAINT FK_CIDADE_2
+    FOREIGN KEY (FK_ESTADO_codigo)
+    REFERENCES ESTADO (codigo)
+    ON DELETE RESTRICT;
  
-ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_1
-    FOREIGN KEY (FK_PONTO_DE_ONIBUS_n_ponto)
+ALTER TABLE BAIRRO ADD CONSTRAINT FK_BAIRRO_2
+    FOREIGN KEY (FK_CIDADE_codigo)
+    REFERENCES CIDADE (codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE LOGRADOURO ADD CONSTRAINT FK_LOGRADOURO_2
+    FOREIGN KEY (FK_BAIRRO_codigo)
+    REFERENCES BAIRRO (codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE NOME_LOGRADOURO ADD CONSTRAINT FK_NOME_LOGRADOURO_1
+    FOREIGN KEY (FK_LOGRADOURO_codigo)
+    REFERENCES LOGRADOURO (codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE RELA_PONTO_ONIBUS_Relacao_1 ADD CONSTRAINT FK_RELA_PONTO_ONIBUS_Relacao_1_2
+    FOREIGN KEY (fk_ONIBUS_n_onibus)
+    REFERENCES ONIBUS (n_onibus);
+ 
+ALTER TABLE RELA_PONTO_ONIBUS_Relacao_1 ADD CONSTRAINT FK_RELA_PONTO_ONIBUS_Relacao_1_3
+    FOREIGN KEY (fk_PONTO_DE_ONIBUS_n_ponto)
+    REFERENCES PONTO_DE_ONIBUS (n_ponto);
+ 
+ALTER TABLE usu_logradouro ADD CONSTRAINT FK_usu_logradouro_1
+    FOREIGN KEY (fk_USUARIO_codigo)
+    REFERENCES USUARIO (codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE usu_logradouro ADD CONSTRAINT FK_usu_logradouro_2
+    FOREIGN KEY (fk_LOGRADOURO_codigo)
+    REFERENCES LOGRADOURO (codigo)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE ponto_logradouro ADD CONSTRAINT FK_ponto_logradouro_1
+    FOREIGN KEY (fk_LOGRADOURO_codigo)
+    REFERENCES LOGRADOURO (codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE ponto_logradouro ADD CONSTRAINT FK_ponto_logradouro_2
+    FOREIGN KEY (fk_PONTO_DE_ONIBUS_n_ponto)
     REFERENCES PONTO_DE_ONIBUS (n_ponto)
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE RESTRICT;
  
-ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_2
-    FOREIGN KEY (FK_ONIBUS_n_onibus)
+ALTER TABLE onibus_usuario ADD CONSTRAINT FK_onibus_usuario_1
+    FOREIGN KEY (fk_USUARIO_codigo)
+    REFERENCES USUARIO (codigo)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE onibus_usuario ADD CONSTRAINT FK_onibus_usuario_2
+    FOREIGN KEY (fk_ONIBUS_n_onibus)
     REFERENCES ONIBUS (n_onibus)
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ON DELETE SET NULL;
  
-ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_0
-    FOREIGN KEY (FK_ONIBUS_n_onibus)
-    REFERENCES ONIBUS (n_onibus)
-    ON DELETE SET NULL ON UPDATE CASCADE;
+ALTER TABLE ponto_usuario ADD CONSTRAINT FK_ponto_usuario_1
+    FOREIGN KEY (fk_USUARIO_codigo)
+    REFERENCES USUARIO (codigo)
+    ON DELETE SET NULL;
  
-ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_1
-    FOREIGN KEY (FK_PONTO_DE_ONIBUS_n_ponto)
+ALTER TABLE ponto_usuario ADD CONSTRAINT FK_ponto_usuario_2
+    FOREIGN KEY (fk_PONTO_DE_ONIBUS_n_ponto)
     REFERENCES PONTO_DE_ONIBUS (n_ponto)
-    ON DELETE SET NULL ON UPDATE CASCADE;      
+    ON DELETE SET NULL;    
         
 ### 8 INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
