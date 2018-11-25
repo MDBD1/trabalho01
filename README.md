@@ -281,7 +281,15 @@ insert into ponto_usuario( data) values ('12-09-2018'), ('10-10-2018'), ('09-11-
 
 insert into  onibus_usuario( data) values ('12-09-2018'), ('10-10-2018'), ('11-11-2018'),('09-09-2018'), ('05-08-2018'), ('09-11-2018'), ('10-11-2018'), ('10-11-2018'), ('10-10-2018'), ('11-11-2018');
 
--- Falta os outros inserts --
+insert into estado (nome, codigo) values ('Espírito Santo', 1), ('São Paulo', 2), ('Rio de Janeiro', 3), ('Bahia', 4), ('Minas Gerais', 5), ('Rio Grande do Sul', 6), ('Amazônia', 7), ('Ceará', 8), ('Mato Grosso', 9), ('Goiás', 10); 
+
+insert into cidade (nome, codigo) values ('Serra', 1), ('Vitória', 2), ('Vila Velha', 3), ('Cariacica', 4), ('Colatina', 5), ('Viana', 6), ('Salvador', 7), ('Vitória da Conquista', 8), ('Itapetinga', 9), ('Fundão', 10); 
+
+insert into bairro (nome, codigo) values ('Manguinhos', 1), ('Goiabeiras', 2), ('Laranjeiras', 3), ('Boa Vista', 4), ('Itapina', 5), ('Mata da Praia', 6), ('Jardim Comburir', 7), ('Jardim da Penha', 8), ('Serra Cede', 9), ('Jacaraípe', 10); 
+
+insert into logradouro (codigo, descricao) values (1, 'rua'), (2, 'avenida'), (3, 'alameda'), (4, 'ladeira'), (5, 'viaduto'), (6, 'canal'), (7, 'beco'), (8, 'contorno'), (9, 'trevo'), (10, 'via'); 
+
+insert into nome_logradouro (nome) values ('Rua Anchieta'), ('Avenida Fernando Ferrari'), ('Avenida Norte Sul'), ('Avenida Central'), ('Avenida Eudes Scherrer de Souza'), ('Civit ll'), ('Avenida João Palácio'), ('Avenida Américo Buiaz'), ('Avenida Guarapari'), ('Avenida Reta da Penha'); 
 
 <br>
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS<br>
