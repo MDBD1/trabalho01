@@ -268,50 +268,20 @@ ALTER TABLE ponto_usuario ADD CONSTRAINT FK_ponto_usuario_2
         a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
         b) formato .SQL
         
-insert into USUARIO(email,senha,nome,rua_avenida, bairro, cidade, estado, n_da_casa)
-values ('fernadasilva@email.com','tuyghj678','Fernanda da Silva', 'Avenida Fernando Ferrari','Goiabeiras','Vitória','Espírito Santo','56'),('mariaclara@email.com','sckopdnefj8','Maria Clara dos Santos','Emanuel Ribeiro','Laranjeiras','Serra','Espírito Santo' 
-,'1600'),('robertaOliveira@email.com','qreytjukfd','Roberta Oliveira','Garrafa Furada','Churrasco','Vila Velha','Espírito Santo','1601'),
-('dsgfdhsj@email.com','bibibibibi','Mark Pereira','Batata','Carne Moida','Viana','Espírito Santo' ,'1602'),
-('blablabla@email.com','qwer1234','Beatris dos Santos','Reta da penha','Patinho','São Paulo','São Paulo','1603'),
-('lkdaqwe@email.com','123890iop','Jackson Wang','Melancia','Lombo','Cariacica','Espírito Santo','1604'),
-('weakSempre@email.com','universo123','Karen Bachini','Abóbora','Bife','Serra','Espírito Santo','1605'),
-('bliblipimpim@gmail','kkj1234','Maria Carolina Da Silva','Abacate','Picanha','Serra','Espírito Santo','1606'),
-('guiSilveira@email.com','6543212','Guilherme Silveira','Gato Preto','Tigre',' Vitória da Conquista','Bahia','1607'),
-('jubilix@gmail.com','coisalinda','Juliana Vasconcelos','Rua Anchieta','Valparaíso','Serra','Espírito Santo', '50');
+insert into USUARIO(email,senha,nome, codigo, n_da_casa) 
+values ('fernadasilva@email.com','tuyghj678','Fernanda da Silva','1','56'),('mariaclara@email.com','sckopdnefj8','Maria Clara dos Santos','2' ,'1600'),('robertaOliveira@email.com','qreytjukfd','Roberta Oliveira','3','1601'), ('dsgfdhsj@email.com','bibibibibi','Mark Pereira','4' ,'1602'), ('blablabla@email.com','qwer1234','Beatris dos Santos','5','1603'), ('lkdaqwe@email.com','123890iop','Jackson Wang','6','1604'), ('weakSempre@email.com','universo123','Karen Bachini','7','1605'), ('bliblipimpim@gmail','kkj1234','Maria Carolina Da Silva','8','1606'), ('guiSilveira@email.com','6543212','Guilherme Silveira','9','1607'), ('jubilix@gmail.com','coisalinda','Juliana Vasconcelos','10', '50');
 
-insert into onibus(n_onibus,n_linha,saida,chegada,itinerario)
-values (234567, 400,'12:00:00','12:30:00','Avenida Paulo Pereira Gomes'),(534285, 289,'13:10:00','13:50:00','Rua Anchieta'),
-(123454, 567,'11:00:00','11:50:00','Avenida Fernando Ferrari'),(876557, 900,'05:40:00','06:00:00','Avenida Norte Sul'),
-(645323, 432,'08:40:00','09:40:00','Avenida Central'),(785444, 72,'09:50:00','16:30:00','Avenida Eudes Scherrer de Souza'),
-(45689,	789,'10:10:00','11:40:00','Civit ll'),(978678,500,'11:55:00','12:55:00','Avenida João Palácio'),
-(12345,	121,'12:40:00','13:45:00','Avenida Américo Buiaz'),(64321, 560,'11:52:00','14:15:00','Avenida Guarapari');
+insert into onibus(n_onibus,n_linha,itinerario, tipo_de_onibus) values (234567, 400, 'Avenida Paulo Pereira Gomes', 'transcol'),(534285, 500,'Rua Anchieta', 'transcol'), (123454, 567,'Avenida Fernando Ferrari', 'tabuazeiro'),(876557, 900,'Avenida Norte Sul', 'transcol'), (645323, 432,'Avenida Central', 'tabuazeiro'),(785444, 72,'Avenida Eudes Scherrer de Souza', 'tabuazeiro'), (45689, 789,'Civit ll', 'transcol'),(978678,500,'Avenida João Palácio', 'transcol'), (12345, 121,'Avenida Américo Buiaz', 'tabuazeiro'),(64321, 560,'Avenida Guarapari','transcol' );
 
-insert into ponto_de_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
-values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito Santo'),
-(12345,'Transcol','Avenida Fernando Ferrari','Jardim da Penha','Vitória','Espírito Santo'),
-(87654,'Transcol','Avenida Eudes Scherrer de Souza','Laranjeiras','Serra','Espírito Santo'),
-(57687,'Seletivo','Rua Anchieta','Santa Luzia','Serra','Espírito Santo'),
-(53034,'Seletivo','Avenida Norte Sul','Rosário de Fátima','Serra','Espírito Santo'),
-(96543,'Transcol','Avenida Saturnino de Brito','Santa Helena','Vitória','Espírito Santo'),
-(1006,'Transcol','Rodovia Governado Mário Covas','Rosário de Fátima','Serra','Espírito Santo'),
-(12456,'Transcol','Rua Antônio Ataíde','Itapuã','Vila Velha','Espírito Santo'),
-(123090,'Transcol','Avenida Luciano das Neves','Itapuã','Vila Velha','Espírito Santo'),
-(4893095,'Seletivo','Avenida Guarapari','Santa Luzia','Serra','Espírito Santo');
+insert into ponto_de_onibus(n_ponto) values (128937), (12345), (87654), (57687), (53034), (96543), (1006), (12456), (123090), (4893095);
 
-insert into ponto_onibus(FK_ONIBUS_n_onibus,FK_PONTO_DE_ONIBUS_n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
-(785444,96543),(45689,1006),(978678,12456),(12345,123090),(64321,4893095);
+insert into RELA_PONTO_ONIBUS_Relacao_1(id, horario, ordem) values (234567,'20:09', 1),(534285,'12:08',12),(123454,'13:00', 7),(876557,'05:50', 5),(645323,'04:00',53), (785444,'14:55',9),(45689,'09:05',10),(978678,'20:45',12),(12345,'23:50',123),(64321,'19:02',48);
 
-insert into acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS( FK_USUARIO_email,FK_PONTO_DE_ONIBUS_n_ponto,FK_ONIBUS_n_onibus)
-values ('fernadasilva@email.com',128937,234567),
-('mariaclara@email.com',12345,534285),
-('robertaOliveira@email.com',87654,123454),
-('dsgfdhsj@email.com',57687,876557),
-('blablabla@email.com',53034,645323),
-('lkdaqwe@email.com',96543,785444),
-('weakSempre@email.com',1006,45689),
-('bliblipimpim@gmail',12456,978678),
-('guiSilveira@email.com',123090,12345),
-('jubilix@gmail.com',4893095,64321);
+insert into ponto_usuario( data) values ('12-09-2018'), ('10-10-2018'), ('09-11-2018'),('04-09-2018'), ('05-08-2018'), ('08-11-2018'), ('07-11-2018'), ('10-11-2018'), ('10-10-2018'), ('09-11-2018');
+
+insert into  onibus_usuario( data) values ('12-09-2018'), ('10-10-2018'), ('11-11-2018'),('09-09-2018'), ('05-08-2018'), ('09-11-2018'), ('10-11-2018'), ('10-11-2018'), ('10-10-2018'), ('11-11-2018');
+
+-- Falta os outros inserts --
 
 <br>
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS<br>
