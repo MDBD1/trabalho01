@@ -58,6 +58,7 @@ número do ponto de ônibus.
 #### 5.2 DECISÕES DE PROJETO
     [atributo]: [descrição da decisão]
    Usuário:
+   
 Campo E-mail (email): em nosso projeto optamos por essa campo, pois caso precisemos informa algo ao usuário teremos o seu contato.
 
 Campo Senha (senha): colocomos essa campo para que o usuário tenha privacidade e segurança sobre seu login.
