@@ -299,115 +299,86 @@ insert into nome_logradouro (nome) values ('Rua Anchieta'), ('Avenida Fernando F
         (em caso de falha na restauração o grupo não pontuará neste quesito)
         c) formato .SQL
         
-CREATE TABLE USUARIO (
-    email varchar(80) PRIMARY KEY,
-    senha varchar(80),
-    nome varchar(80),
-    n_da_casa varchar(80),
-    rua_avenida  varchar(255),
-    bairro varchar(100),
-    estado varchar(100),
-    cidade varchar(100)
-);
+CREATE TABLE USUARIO ( email varchar(80), senha varchar(80), nome varchar(80), n_da_casa int, codigo serial PRIMARY KEY );
 
-CREATE TABLE ONIBUS (
-    n_onibus int PRIMARY KEY,
-    n_linha int,
-    saida time,
-    chegada time,
-    itinerario varchar(255)
-);
+CREATE TABLE ONIBUS ( n_onibus int PRIMARY KEY, n_linha int, itinerario varchar(255), tipo_de_onibus varchar(80) );
 
-CREATE TABLE PONTO_DE_ONIBUS (
-    n_ponto int PRIMARY KEY,
-    tipo_de_onibus varchar(80),
-    cidade varchar(100),
-    rua_avenida varchar(255),
-    bairro varchar(100),
-    estado varchar(100)
-);
+CREATE TABLE PONTO_DE_ONIBUS ( n_ponto int PRIMARY KEY );
 
+CREATE TABLE CIDADE ( nome varchar(80), codigo int PRIMARY KEY, FK_ESTADO_codigo int );
 
-CREATE TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS (
-    FK_USUARIO_email varchar(80),
-    FK_PONTO_DE_ONIBUS_n_ponto int,
-    FK_ONIBUS_n_onibus int
-);
+CREATE TABLE ESTADO ( nome varchar(80), codigo int PRIMARY KEY );
 
-CREATE TABLE ponto_onibus (
-    FK_ONIBUS_n_onibus int,
-    FK_PONTO_DE_ONIBUS_n_ponto int
-);
- 
-ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_0
-    FOREIGN KEY (FK_USUARIO_email)
-    REFERENCES USUARIO (email)
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
- 
-ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_1
-    FOREIGN KEY (FK_PONTO_DE_ONIBUS_n_ponto)
-    REFERENCES PONTO_DE_ONIBUS (n_ponto)
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
- 
-ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_2
-    FOREIGN KEY (FK_ONIBUS_n_onibus)
-    REFERENCES ONIBUS (n_onibus)
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
- 
-ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_0
-    FOREIGN KEY (FK_ONIBUS_n_onibus)
-    REFERENCES ONIBUS (n_onibus)
-    ON DELETE SET NULL ON UPDATE CASCADE;
- 
-ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_1
-    FOREIGN KEY (FK_PONTO_DE_ONIBUS_n_ponto)
-    REFERENCES PONTO_DE_ONIBUS (n_ponto)
-    ON DELETE SET NULL ON UPDATE CASCADE; 
-    
-insert into USUARIO(email,senha,nome,rua_avenida, bairro, cidade, estado, n_da_casa)
-values ('fernadasilva@email.com','tuyghj678','Fernanda da Silva', 'Avenida Fernando Ferrari','Goiabeiras','Vitória','Espírito Santo','56'),('mariaclara@email.com','sckopdnefj8','Maria Clara dos Santos','Emanuel Ribeiro','Laranjeiras','Serra','Espírito Santo' 
-,'1600'),('robertaOliveira@email.com','qreytjukfd','Roberta Oliveira','Garrafa Furada','Churrasco','Vila Velha','Espírito Santo','1601'),
-('dsgfdhsj@email.com','bibibibibi','Mark Pereira','Batata','Carne Moida','Viana','Espírito Santo' ,'1602'),
-('blablabla@email.com','qwer1234','Beatris dos Santos','Reta da penha','Patinho','São Paulo','São Paulo','1603'),
-('lkdaqwe@email.com','123890iop','Jackson Wang','Melancia','Lombo','Cariacica','Espírito Santo','1604'),
-('weakSempre@email.com','universo123','Karen Bachini','Abóbora','Bife','Serra','Espírito Santo','1605'),
-('bliblipimpim@gmail','kkj1234','Maria Carolina Da Silva','Abacate','Picanha','Serra','Espírito Santo','1606'),
-('guiSilveira@email.com','6543212','Guilherme Silveira','Gato Preto','Tigre',' Vitória da Conquista','Bahia','1607'),
-('jubilix@gmail.com','coisalinda','Juliana Vasconcelos','Rua Anchieta','Valparaíso','Serra','Espírito Santo', '50');
+CREATE TABLE BAIRRO ( nome varchar(80), codigo int PRIMARY KEY, FK_CIDADE_codigo int );
 
-insert into onibus(n_onibus,n_linha,saida,chegada,itinerario)
-values (234567, 400,'12:00:00','12:30:00','Avenida Paulo Pereira Gomes'),(534285, 289,'13:10:00','13:50:00','Rua Anchieta'),
-(123454, 567,'11:00:00','11:50:00','Avenida Fernando Ferrari'),(876557, 900,'05:40:00','06:00:00','Avenida Norte Sul'),
-(645323, 432,'08:40:00','09:40:00','Avenida Central'),(785444, 72,'09:50:00','16:30:00','Avenida Eudes Scherrer de Souza'),
-(45689,	789,'10:10:00','11:40:00','Civit ll'),(978678,500,'11:55:00','12:55:00','Avenida João Palácio'),
-(12345,	121,'12:40:00','13:45:00','Avenida Américo Buiaz'),(64321, 560,'11:52:00','14:15:00','Avenida Guarapari');
+CREATE TABLE LOGRADOURO ( codigo int PRIMARY KEY, descricao varchar(255), FK_BAIRRO_codigo int );
 
-insert into ponto_de_onibus(n_ponto,tipo_de_onibus,rua_avenida,bairro,cidade,estado)
-values (128937,'Transcol','Reta da Penha','Santa Helena','Vitória','Espírito Santo'),
-(12345,'Transcol','Avenida Fernando Ferrari','Jardim da Penha','Vitória','Espírito Santo'),
-(87654,'Transcol','Avenida Eudes Scherrer de Souza','Laranjeiras','Serra','Espírito Santo'),
-(57687,'Seletivo','Rua Anchieta','Santa Luzia','Serra','Espírito Santo'),
-(53034,'Seletivo','Avenida Norte Sul','Rosário de Fátima','Serra','Espírito Santo'),
-(96543,'Transcol','Avenida Saturnino de Brito','Santa Helena','Vitória','Espírito Santo'),
-(1006,'Transcol','Rodovia Governado Mário Covas','Rosário de Fátima','Serra','Espírito Santo'),
-(12456,'Transcol','Rua Antônio Ataíde','Itapuã','Vila Velha','Espírito Santo'),
-(123090,'Transcol','Avenida Luciano das Neves','Itapuã','Vila Velha','Espírito Santo'),
-(4893095,'Seletivo','Avenida Guarapari','Santa Luzia','Serra','Espírito Santo');
+CREATE TABLE NOME_LOGRADOURO ( nome varchar(255), FK_LOGRADOURO_codigo int );
 
-insert into ponto_onibus(FK_ONIBUS_n_onibus,FK_PONTO_DE_ONIBUS_n_ponto) values (234567,128937),(534285,12345),(123454,87654),(876557,57687),(645323,53034),
-(785444,96543),(45689,1006),(978678,12456),(12345,123090),(64321,4893095);
+CREATE TABLE RELA_PONTO_ONIBUS_Relacao_1 ( id serial PRIMARY KEY, horario time, ordem serial, fk_ONIBUS_n_onibus int, fk_PONTO_DE_ONIBUS_n_ponto int );
 
-insert into acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS( FK_USUARIO_email,FK_PONTO_DE_ONIBUS_n_ponto,FK_ONIBUS_n_onibus)
-values ('fernadasilva@email.com',128937,234567),
-('mariaclara@email.com',12345,534285),
-('robertaOliveira@email.com',87654,123454),
-('dsgfdhsj@email.com',57687,876557),
-('blablabla@email.com',53034,645323),
-('lkdaqwe@email.com',96543,785444),
-('weakSempre@email.com',1006,45689),
-('bliblipimpim@gmail',12456,978678),
-('guiSilveira@email.com',123090,12345),
-('jubilix@gmail.com',4893095,64321);
+CREATE TABLE usu_logradouro ( fk_USUARIO_codigo serial, fk_LOGRADOURO_codigo int );
+
+CREATE TABLE ponto_logradouro ( fk_LOGRADOURO_codigo int, fk_PONTO_DE_ONIBUS_n_ponto int );
+
+CREATE TABLE onibus_usuario ( fk_USUARIO_codigo serial, fk_ONIBUS_n_onibus int, data DATE );
+
+CREATE TABLE ponto_usuario ( fk_USUARIO_codigo serial, fk_PONTO_DE_ONIBUS_n_ponto int, data DATE );
+
+ALTER TABLE CIDADE ADD CONSTRAINT FK_CIDADE_2 FOREIGN KEY (FK_ESTADO_codigo) REFERENCES ESTADO (codigo) ON DELETE RESTRICT;
+
+ALTER TABLE BAIRRO ADD CONSTRAINT FK_BAIRRO_2 FOREIGN KEY (FK_CIDADE_codigo) REFERENCES CIDADE (codigo) ON DELETE RESTRICT;
+
+ALTER TABLE LOGRADOURO ADD CONSTRAINT FK_LOGRADOURO_2 FOREIGN KEY (FK_BAIRRO_codigo) REFERENCES BAIRRO (codigo) ON DELETE RESTRICT;
+
+ALTER TABLE NOME_LOGRADOURO ADD CONSTRAINT FK_NOME_LOGRADOURO_1 FOREIGN KEY (FK_LOGRADOURO_codigo) REFERENCES LOGRADOURO (codigo) ON DELETE RESTRICT;
+
+ALTER TABLE RELA_PONTO_ONIBUS_Relacao_1 ADD CONSTRAINT FK_RELA_PONTO_ONIBUS_Relacao_1_2 FOREIGN KEY (fk_ONIBUS_n_onibus) REFERENCES ONIBUS (n_onibus);
+
+ALTER TABLE RELA_PONTO_ONIBUS_Relacao_1 ADD CONSTRAINT FK_RELA_PONTO_ONIBUS_Relacao_1_3 FOREIGN KEY (fk_PONTO_DE_ONIBUS_n_ponto) REFERENCES PONTO_DE_ONIBUS (n_ponto);
+
+ALTER TABLE usu_logradouro ADD CONSTRAINT FK_usu_logradouro_1 FOREIGN KEY (fk_USUARIO_codigo) REFERENCES USUARIO (codigo) ON DELETE RESTRICT;
+
+ALTER TABLE usu_logradouro ADD CONSTRAINT FK_usu_logradouro_2 FOREIGN KEY (fk_LOGRADOURO_codigo) REFERENCES LOGRADOURO (codigo) ON DELETE SET NULL;
+
+ALTER TABLE ponto_logradouro ADD CONSTRAINT FK_ponto_logradouro_1 FOREIGN KEY (fk_LOGRADOURO_codigo) REFERENCES LOGRADOURO (codigo) ON DELETE RESTRICT;
+
+ALTER TABLE ponto_logradouro ADD CONSTRAINT FK_ponto_logradouro_2 FOREIGN KEY (fk_PONTO_DE_ONIBUS_n_ponto) REFERENCES PONTO_DE_ONIBUS (n_ponto) ON DELETE RESTRICT;
+
+ALTER TABLE onibus_usuario ADD CONSTRAINT FK_onibus_usuario_1 FOREIGN KEY (fk_USUARIO_codigo) REFERENCES USUARIO (codigo) ON DELETE SET NULL;
+
+ALTER TABLE onibus_usuario ADD CONSTRAINT FK_onibus_usuario_2 FOREIGN KEY (fk_ONIBUS_n_onibus) REFERENCES ONIBUS (n_onibus) ON DELETE SET NULL;
+
+ALTER TABLE ponto_usuario ADD CONSTRAINT FK_ponto_usuario_1 FOREIGN KEY (fk_USUARIO_codigo) REFERENCES USUARIO (codigo) ON DELETE SET NULL;
+
+ALTER TABLE ponto_usuario ADD CONSTRAINT FK_ponto_usuario_2 FOREIGN KEY (fk_PONTO_DE_ONIBUS_n_ponto) REFERENCES PONTO_DE_ONIBUS (n_ponto) ON DELETE SET NULL;
+
+insert into RELA_PONTO_ONIBUS_Relacao_1(id, horario, ordem, fk_onibus_n_onibus. fk_ponto_de_onibus_n_ponto) values (234567,'20:09', 1, 234567, 128937),(534285,'12:08',12, 534285, 12345),(123454,'13:00', 7, 876557, 4893095),(876557,'05:50', 5, 785444, 123090),(645323,'04:00',53, 978678, 53034), (785444,'14:55',9, 64321, 96543),(45689,'09:05',10, 534285, 1006),(978678,'20:45',12, 234567, 87654),(12345,'23:50',123, 64321, 12456),(64321,'19:02',48, 785444, 87654);
+
+insert into ponto_usuario(fk_usuario_codigo, fk_ponto_de_onibus_n_ponto, data) values ('1', 128937, '12-09-2018'), ('2', 12345, '10-10-2018'), ('3',87654, '09-11-2018'),('4', 57687,'04-09-2018'), ('5', 53034,'05-08-2018'), ('6', 96543,'08-11-2018'), ('7',1006 ,'07-11-2018'), ('8', 12456,'10-11-2018'), ('9', 123090,'10-10-2018'), ('10',4893095,'09-11-2018');
+
+insert into onibus_usuario(fk_usuario_codigo, fk_onibus_n_onibus, data) values ('1',234567,'12-09-2018'), ('2',534285,'10-10-2018'), ('3',123454,'11-11-2018'),('4',876557,'09-09-2018'), ('5',645323,'05-08-2018'), ('6',785444,'09-11-2018'), ('7',45689,'10-11-2018'), ('8',978678,'10-11-2018'), ('9',12345,'10-10-2018'), ('10',64321,'11-11-2018');
+
+insert into logradouro (codigo, descricao, fk_bairro_codigo) values (1, 'rua', 10), (2, 'avenida', 9), (3, 'alameda', 8), (4, 'ladeira', 7), (5, 'viaduto', 6), (6, 'canal', 5), (7, 'beco', 4), (8, 'contorno', 3), (9, 'trevo', 2), (10, 'via', 1);
+
+insert into ponto_logradouro (fk_logradouro_codigo, fk_ponto_de_onibus_n_ponto) values (1, 128937), (2, 12345), (3, 87654), (4, 57687), (5, 53034), (6, 96543) (7, 1006), (8, 12456), (9, 123090), (10, 4893095);
+
+insert into usu_logradouro (fk_usuario_codigo, fk_logradouro_codigo) values ('1', 2), ('2', 3), ('3', 4), ('4', 5), ('5', 6), ('6', 7), ('7', 8), ('8', 9), ('9', 10), ('10', 1);
+
+insert into nome_logradouro (nome, fk_logradouro_codigo) values ('Rua Anchieta', 1), ('Avenida Fernando Ferrari', 2), ('Avenida Norte Sul', 2), ('Avenida Central', 2), ('Avenida Eudes Scherrer de Souza', 2), ('Civit ll', 2), ('Avenida João Palácio', 2), ('Avenida Américo Buiaz', 2), ('Avenida Guarapari', 2), ('Avenida Reta da Penha', 2);
+
+insert into estado (nome, codigo) values ('Espírito Santo', 1), ('São Paulo', 2), ('Rio de Janeiro', 3), ('Bahia', 4), ('Minas Gerais', 5), ('Rio Grande do Sul', 6), ('Amazônia', 7), ('Ceará', 8), ('Mato Grosso', 9), ('Goiás', 10);
+
+insert into cidade (nome, codigo, fk_estado_codigo) values ('Serra', 1, 1), ('Vitória', 2, 1), ('Vila Velha', 3, 1), ('Cariacica', 4, 1), ('Colatina', 5, 1), ('Viana', 6, 1), ('Salvador', 7, 4), ('Vitória da Conquista', 8, 4), ('Itapetinga', 9, 4), ('Fundão', 10, 1);
+
+insert into bairro (nome, codigo, fk_cidade_codigo) values ('Manguinhos', 1, 1), ('Goiabeiras', 2, 2), ('Laranjeiras', 3, 1), ('Boa Vista', 4, 2), ('Itapina', 5, 5), ('Mata da Praia', 6, 2), ('Jardim Comburir', 7, 2), ('Jardim da Penha', 8, 2), ('Serra Cede', 9, 1), ('Jacaraípe', 10, 1);
+
+insert into ponto_de_onibus(n_ponto) values (128937), (12345), (87654), (57687), (53034), (96543), (1006), (12456), (123090), (4893095);
+
+insert into USUARIO(email,senha,nome, codigo, n_da_casa) values ('fernadasilva@email.com','tuyghj678','Fernanda da Silva','1','56'),('mariaclara@email.com','sckopdnefj8','Maria Clara dos Santos','2' ,'1600'),('robertaOliveira@email.com','qreytjukfd','Roberta Oliveira','3','1601'), ('dsgfdhsj@email.com','bibibibibi','Mark Pereira','4' ,'1602'), ('blablabla@email.com','qwer1234','Beatris dos Santos','5','1603'), ('lkdaqwe@email.com','123890iop','Jackson Wang','6','1604'), ('weakSempre@email.com','universo123','Karen Bachini','7','1605'), ('bliblipimpim@gmail','kkj1234','Maria Carolina Da Silva','8','1606'), ('guiSilveira@email.com','6543212','Guilherme Silveira','9','1607'), ('jubilix@gmail.com','coisalinda','Juliana Vasconcelos','10', '50');
+
+insert into onibus(n_onibus,n_linha,itinerario, tipo_de_onibus) values (234567, 400, 'Avenida Paulo Pereira Gomes', 'transcol'),(534285, 500,'Rua Anchieta', 'transcol'), (123454, 567,'Avenida Fernando Ferrari', 'tabuazeiro'),(876557, 900,'Avenida Norte Sul', 'transcol'), (645323, 432,'Avenida Central', 'tabuazeiro'),(785444, 72,'Avenida Eudes Scherrer de Souza', 'tabuazeiro'), (45689, 789,'Civit ll', 'transcol'),(978678,500,'Avenida João Palácio', 'transcol'), (12345, 121,'Avenida Américo Buiaz', 'tabuazeiro'),(64321, 560,'Avenida Guarapari','transcol' );
+
 
 <br>
         
