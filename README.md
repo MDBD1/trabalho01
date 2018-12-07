@@ -69,7 +69,8 @@ Campo Número da Casa (n_da_casa): optamos por esse campo para melhor compreende
 
 Campo Código (codigo): criamos esse campo para que a consulta sobre cada usuário fique mais acessível, assim cada usuário tem sua própria “identidade”.
 
- Ônibus: 
+   Ônibus: 
+ 
 Campo Número do ônibus (n_onibus): esse campo foi colocado para que possamos melhor indentificar o ônibus.
 
 Campo Número da linha(n_linha): optamos por esse campo para que o acesso do usuário sobre o sistema fique mais coerente com sua realidade.
@@ -77,22 +78,27 @@ Campo Número da linha(n_linha): optamos por esse campo para que o acesso do usu
 Campo Tipo de ônibus (tipo_de_onibus): criamos esse campo para que haja mais informações sobre o ônibus para o usuário.
 
 Ponto de ônibus:
+
 Campo Número do ponto (n_ponto): serve para melhor indentificarmos cada ponto de ônibus, e ralacioná-lo com os números dos ônibus que ali passam.
 
 Bairro, Cidade Estado:
+
 Campo Código (codigo): criamos esse campo para que cada um tenha sua “identidade” assim não ocorre o risco de terem o mesmo nome.
 
 Campo Nome (nome): criamos esse campo para que o usuário tenha melhor acesso sobre a informação.
 
 Logradouro:
+
 Campo Descrição (descricao): optamos por esse campo para saber o tipo de logradouro.
 
 Campo Código (codigo):  criamos esse campo para que cada um tenha sua “identidade” assim não ocorre o risco de terem o mesmo nome.
 
 Nome Logradouro:
+
 Campo Nome (nome): optamos para o nome de cada logradouro, relacionando com o tabela Logradouro.
 
 Relação Ponto Ônibus:
+
 Campo Horário (horario): criamos esse campo para que tenhamos o horário em que cada ônibus passa em determinado ponto.
 
 Campo Ordem (ordem): optamos por esse campo para sabermos a ordem em que os ônibus passam nos pontos.
@@ -100,9 +106,11 @@ Campo Ordem (ordem): optamos por esse campo para sabermos a ordem em que os ôni
 Campo Id (id): optamos por esse campo para que a relação ônibus e ponto de ônibus tenham uma “identidade”.
 
 Relação Ônibus e Usuário:
+
 Campo Data (data): criamos esse campo para um melhor controle e organização sobre o sistema. 
 
 Relação Ponto de Ônibus e Usuário:
+
 Campo Data (data): criamos esse campo para um melhor controle e organização sobre o sistema.
 
     
