@@ -268,28 +268,31 @@ ALTER TABLE ponto_usuario ADD CONSTRAINT FK_ponto_usuario_2
         a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
         b) formato .SQL
         
-insert into USUARIO(email,senha,nome, codigo, n_da_casa) 
-values ('fernadasilva@email.com','tuyghj678','Fernanda da Silva','1','56'),('mariaclara@email.com','sckopdnefj8','Maria Clara dos Santos','2' ,'1600'),('robertaOliveira@email.com','qreytjukfd','Roberta Oliveira','3','1601'), ('dsgfdhsj@email.com','bibibibibi','Mark Pereira','4' ,'1602'), ('blablabla@email.com','qwer1234','Beatris dos Santos','5','1603'), ('lkdaqwe@email.com','123890iop','Jackson Wang','6','1604'), ('weakSempre@email.com','universo123','Karen Bachini','7','1605'), ('bliblipimpim@gmail','kkj1234','Maria Carolina Da Silva','8','1606'), ('guiSilveira@email.com','6543212','Guilherme Silveira','9','1607'), ('jubilix@gmail.com','coisalinda','Juliana Vasconcelos','10', '50');
+insert into RELA_PONTO_ONIBUS_Relacao_1(id, horario, ordem, fk_onibus_n_onibus. fk_ponto_de_onibus_n_ponto) values (234567,'20:09', 1, 234567, 128937),(534285,'12:08',12, 534285, 12345),(123454,'13:00', 7, 876557, 4893095),(876557,'05:50', 5, 785444, 123090),(645323,'04:00',53, 978678, 53034), (785444,'14:55',9, 64321, 96543),(45689,'09:05',10, 534285, 1006),(978678,'20:45',12, 234567, 87654),(12345,'23:50',123, 64321, 12456),(64321,'19:02',48, 785444, 87654);
 
-insert into onibus(n_onibus,n_linha,itinerario, tipo_de_onibus) values (234567, 400, 'Avenida Paulo Pereira Gomes', 'transcol'),(534285, 500,'Rua Anchieta', 'transcol'), (123454, 567,'Avenida Fernando Ferrari', 'tabuazeiro'),(876557, 900,'Avenida Norte Sul', 'transcol'), (645323, 432,'Avenida Central', 'tabuazeiro'),(785444, 72,'Avenida Eudes Scherrer de Souza', 'tabuazeiro'), (45689, 789,'Civit ll', 'transcol'),(978678,500,'Avenida João Palácio', 'transcol'), (12345, 121,'Avenida Américo Buiaz', 'tabuazeiro'),(64321, 560,'Avenida Guarapari','transcol' );
+insert into ponto_usuario(fk_usuario_codigo, fk_ponto_de_onibus_n_ponto, data) values ('1', 128937, '12-09-2018'), ('2', 12345, '10-10-2018'), ('3',87654, '09-11-2018'),('4', 57687,'04-09-2018'), ('5', 53034,'05-08-2018'), ('6', 96543,'08-11-2018'), ('7',1006 ,'07-11-2018'), ('8', 12456,'10-11-2018'), ('9', 123090,'10-10-2018'), ('10',4893095,'09-11-2018');
+
+insert into onibus_usuario(fk_usuario_codigo, fk_onibus_n_onibus, data) values ('1',234567,'12-09-2018'), ('2',534285,'10-10-2018'), ('3',123454,'11-11-2018'),('4',876557,'09-09-2018'), ('5',645323,'05-08-2018'), ('6',785444,'09-11-2018'), ('7',45689,'10-11-2018'), ('8',978678,'10-11-2018'), ('9',12345,'10-10-2018'), ('10',64321,'11-11-2018');
+
+insert into logradouro (codigo, descricao, fk_bairro_codigo) values (1, 'rua', 10), (2, 'avenida', 9), (3, 'alameda', 8), (4, 'ladeira', 7), (5, 'viaduto', 6), (6, 'canal', 5), (7, 'beco', 4), (8, 'contorno', 3), (9, 'trevo', 2), (10, 'via', 1);
+
+insert into ponto_logradouro (fk_logradouro_codigo, fk_ponto_de_onibus_n_ponto) values (1, 128937), (2, 12345), (3, 87654), (4, 57687), (5, 53034), (6, 96543) (7, 1006), (8, 12456), (9, 123090), (10, 4893095);
+
+insert into usu_logradouro (fk_usuario_codigo, fk_logradouro_codigo) values ('1', 2), ('2', 3), ('3', 4), ('4', 5), ('5', 6), ('6', 7), ('7', 8), ('8', 9), ('9', 10), ('10', 1);
+
+insert into nome_logradouro (nome, fk_logradouro_codigo) values ('Rua Anchieta', 1), ('Avenida Fernando Ferrari', 2), ('Avenida Norte Sul', 2), ('Avenida Central', 2), ('Avenida Eudes Scherrer de Souza', 2), ('Civit ll', 2), ('Avenida João Palácio', 2), ('Avenida Américo Buiaz', 2), ('Avenida Guarapari', 2), ('Avenida Reta da Penha', 2);
+
+insert into estado (nome, codigo) values ('Espírito Santo', 1), ('São Paulo', 2), ('Rio de Janeiro', 3), ('Bahia', 4), ('Minas Gerais', 5), ('Rio Grande do Sul', 6), ('Amazônia', 7), ('Ceará', 8), ('Mato Grosso', 9), ('Goiás', 10);
+
+insert into cidade (nome, codigo, fk_estado_codigo) values ('Serra', 1, 1), ('Vitória', 2, 1), ('Vila Velha', 3, 1), ('Cariacica', 4, 1), ('Colatina', 5, 1), ('Viana', 6, 1), ('Salvador', 7, 4), ('Vitória da Conquista', 8, 4), ('Itapetinga', 9, 4), ('Fundão', 10, 1);
+
+insert into bairro (nome, codigo, fk_cidade_codigo) values ('Manguinhos', 1, 1), ('Goiabeiras', 2, 2), ('Laranjeiras', 3, 1), ('Boa Vista', 4, 2), ('Itapina', 5, 5), ('Mata da Praia', 6, 2), ('Jardim Comburir', 7, 2), ('Jardim da Penha', 8, 2), ('Serra Cede', 9, 1), ('Jacaraípe', 10, 1);
 
 insert into ponto_de_onibus(n_ponto) values (128937), (12345), (87654), (57687), (53034), (96543), (1006), (12456), (123090), (4893095);
 
-insert into RELA_PONTO_ONIBUS_Relacao_1(id, horario, ordem) values (234567,'20:09', 1),(534285,'12:08',12),(123454,'13:00', 7),(876557,'05:50', 5),(645323,'04:00',53), (785444,'14:55',9),(45689,'09:05',10),(978678,'20:45',12),(12345,'23:50',123),(64321,'19:02',48);
+insert into USUARIO(email,senha,nome, codigo, n_da_casa) values ('fernadasilva@email.com','tuyghj678','Fernanda da Silva','1','56'),('mariaclara@email.com','sckopdnefj8','Maria Clara dos Santos','2' ,'1600'),('robertaOliveira@email.com','qreytjukfd','Roberta Oliveira','3','1601'), ('dsgfdhsj@email.com','bibibibibi','Mark Pereira','4' ,'1602'), ('blablabla@email.com','qwer1234','Beatris dos Santos','5','1603'), ('lkdaqwe@email.com','123890iop','Jackson Wang','6','1604'), ('weakSempre@email.com','universo123','Karen Bachini','7','1605'), ('bliblipimpim@gmail','kkj1234','Maria Carolina Da Silva','8','1606'), ('guiSilveira@email.com','6543212','Guilherme Silveira','9','1607'), ('jubilix@gmail.com','coisalinda','Juliana Vasconcelos','10', '50');
 
-insert into ponto_usuario( data) values ('12-09-2018'), ('10-10-2018'), ('09-11-2018'),('04-09-2018'), ('05-08-2018'), ('08-11-2018'), ('07-11-2018'), ('10-11-2018'), ('10-10-2018'), ('09-11-2018');
-
-insert into  onibus_usuario( data) values ('12-09-2018'), ('10-10-2018'), ('11-11-2018'),('09-09-2018'), ('05-08-2018'), ('09-11-2018'), ('10-11-2018'), ('10-11-2018'), ('10-10-2018'), ('11-11-2018');
-
-insert into estado (nome, codigo) values ('Espírito Santo', 1), ('São Paulo', 2), ('Rio de Janeiro', 3), ('Bahia', 4), ('Minas Gerais', 5), ('Rio Grande do Sul', 6), ('Amazônia', 7), ('Ceará', 8), ('Mato Grosso', 9), ('Goiás', 10); 
-
-insert into cidade (nome, codigo) values ('Serra', 1), ('Vitória', 2), ('Vila Velha', 3), ('Cariacica', 4), ('Colatina', 5), ('Viana', 6), ('Salvador', 7), ('Vitória da Conquista', 8), ('Itapetinga', 9), ('Fundão', 10); 
-
-insert into bairro (nome, codigo) values ('Manguinhos', 1), ('Goiabeiras', 2), ('Laranjeiras', 3), ('Boa Vista', 4), ('Itapina', 5), ('Mata da Praia', 6), ('Jardim Comburir', 7), ('Jardim da Penha', 8), ('Serra Cede', 9), ('Jacaraípe', 10); 
-
-insert into logradouro (codigo, descricao) values (1, 'rua'), (2, 'avenida'), (3, 'alameda'), (4, 'ladeira'), (5, 'viaduto'), (6, 'canal'), (7, 'beco'), (8, 'contorno'), (9, 'trevo'), (10, 'via'); 
-
-insert into nome_logradouro (nome) values ('Rua Anchieta'), ('Avenida Fernando Ferrari'), ('Avenida Norte Sul'), ('Avenida Central'), ('Avenida Eudes Scherrer de Souza'), ('Civit ll'), ('Avenida João Palácio'), ('Avenida Américo Buiaz'), ('Avenida Guarapari'), ('Avenida Reta da Penha'); 
+insert into onibus(n_onibus,n_linha,itinerario, tipo_de_onibus) values (234567, 400, 'Avenida Paulo Pereira Gomes', 'transcol'),(534285, 500,'Rua Anchieta', 'transcol'), (123454, 567,'Avenida Fernando Ferrari', 'tabuazeiro'),(876557, 900,'Avenida Norte Sul', 'transcol'), (645323, 432,'Avenida Central', 'tabuazeiro'),(785444, 72,'Avenida Eudes Scherrer de Souza', 'tabuazeiro'), (45689, 789,'Civit ll', 'transcol'),(978678,500,'Avenida João Palácio', 'transcol'), (12345, 121,'Avenida Américo Buiaz', 'tabuazeiro'),(64321, 560,'Avenida Guarapari','transcol' );
 
 <br>
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS<br>
