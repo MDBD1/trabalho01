@@ -57,36 +57,53 @@ número do ponto de ônibus.
 ## Marco de Entrega 01 em: (20/04/2018)<br>
 #### 5.2 DECISÕES DE PROJETO
     [atributo]: [descrição da decisão]
-   
-* Campo E-mail: em nosso projeto optamos por essa campo, pois caso precisemos informa algo ao usuário
-teremos o seu contato.
+   Usuário:
+Campo E-mail (email): em nosso projeto optamos por essa campo, pois caso precisemos informa algo ao usuário teremos o seu contato.
 
-* Campo Senha: colocomos essa campo para que o usuário tenha privacidade e segurança sobre seu login.
+Campo Senha (senha): colocomos essa campo para que o usuário tenha privacidade e segurança sobre seu login.
 
-* Campo Nome: optamos por esse campo para ter informações a mais sobre o cliente.
+Campo Nome (nome): optamos por esse campo para ter informações a mais sobre o cliente.
 
-* Campo Rua/Avenida/Alameda, Bairro, Cidade, Estado, Número da casa: optamos por esses campos para que 
-sua localizaçõa seje clara e facilite ao sistema encontrar pontos de ônibus mais próximos ao usuário.
+Campo Número da Casa (n_da_casa): optamos por esse campo para melhor compreender o endereço do usuário.
 
-* Campo Número do ônibus: esse campo foi colocado para que possamos melhor indentificar o ônibus.
+Campo Código (codigo): criamos esse campo para que a consulta sobre cada usuário fique mais acessível, assim cada usuário tem sua própria “identidade”.
 
-* Campo Número da linha: optamos por esse campo pois iremos relacioná-lo com o itinerário, e também
-para o usuário indentificar o ônibus.
+ Ônibus: 
+Campo Número do ônibus (n_onibus): esse campo foi colocado para que possamos melhor indentificar o ônibus.
 
-* Compo Horário de saída e chegada: Optamos por esse campo para facilitar ao sistema de mostrar ao usuário
-o tempo que falta pra tal ônibus chegar a tal ponto de ônibus.
+Campo Número da linha(n_linha): optamos por esse campo para que o acesso do usuário sobre o sistema fique mais coerente com sua realidade.
 
-* Campo Itinerário: colocamos esse campo para que o usuário tenah acesso ao caminho que tal ônibus pecorre,  
-para melhor indentificar o horário do ônibus, e para dizer quais pontos esse ônibus passa.
+Campo Tipo de ônibus (tipo_de_onibus): criamos esse campo para que haja mais informações sobre o ônibus para o usuário.
 
-* Campo Número do ponto: serve para melhor indentificarmos cada ponto de ônibus, e ralacioná-lo com os números dos ônibus
-que ali passam.
+Ponto de ônibus:
+Campo Número do ponto (n_ponto): serve para melhor indentificarmos cada ponto de ônibus, e ralacioná-lo com os números dos ônibus que ali passam.
 
-* Campo Empresa do ônibus: optamos por esse campo para que o usuário saiba qual empresa atua em cada ponto de ônibos.
+Bairro, Cidade Estado:
+Campo Código (codigo): criamos esse campo para que cada um tenha sua “identidade” assim não ocorre o risco de terem o mesmo nome.
 
-* Campo Rua/Avenida/Alameda, Bairro, Cidade, Estado: colocamos esse campo para que o ponto de ônibus seja 
-melhor indentificado pelo sistema.
-* Nós não fizemos o tópico 9.4 letra b, pois o nosso trabalho não precisa da informação data.
+Campo Nome (nome): criamos esse campo para que o usuário tenha melhor acesso sobre a informação.
+
+Logradouro:
+Campo Descrição (descricao): optamos por esse campo para saber o tipo de logradouro.
+
+Campo Código (codigo):  criamos esse campo para que cada um tenha sua “identidade” assim não ocorre o risco de terem o mesmo nome.
+
+Nome Logradouro:
+Campo Nome (nome): optamos para o nome de cada logradouro, relacionando com o tabela Logradouro.
+
+Relação Ponto Ônibus:
+Campo Horário (horario): criamos esse campo para que tenhamos o horário em que cada ônibus passa em determinado ponto.
+
+Campo Ordem (ordem): optamos por esse campo para sabermos a ordem em que os ônibus passam nos pontos.
+
+Campo Id (id): optamos por esse campo para que a relação ônibus e ponto de ônibus tenham uma “identidade”.
+
+Relação Ônibus e Usuário:
+Campo Data (data): criamos esse campo para um melhor controle e organização sobre o sistema. 
+
+Relação Ponto de Ônibus e Usuário:
+Campo Data (data): criamos esse campo para um melhor controle e organização sobre o sistema.
+
     
 #### 5.3 DESCRIÇÃO DOS DADOS
     [objeto]: [descrição do objeto]
