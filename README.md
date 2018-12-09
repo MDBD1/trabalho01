@@ -797,7 +797,6 @@ Nós não fizemos esse tópico, pois o nosso trabalho não precisa da informaç�
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/up2.png)<br>
 
 
-
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/up3.png)<br>
 
 
