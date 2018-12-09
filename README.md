@@ -419,11 +419,32 @@ insert into onibus(n_onibus,n_linha,itinerario, tipo_de_onibus) values (234567, 
         c) formato .SQL
   
         
-drop table acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS;
+drop table usuario; 
+</br>
 drop table ponto_onibus;
-drop table USUARIO;
-drop table ONIBUS;
-drop table PONTO_DE_ONIBUS;
+</br>
+drop table onibus;
+</br>
+drop table logradouro;
+</br>
+drop table nome_logradouro;
+</br>
+drop table bairro;
+</br>
+drop table estado;
+</br>
+drop table cidade;
+</br>
+drop table onibus_usuario;
+</br>
+drop table ponto_usuario;
+</br>
+drop table usu_logradouro;
+</br>
+drop table rela_ponto_onibus_relacao_1;
+</br>
+drop table ponto_logradouro;
+</br>
 
 
 CREATE TABLE USUARIO (
