@@ -549,23 +549,55 @@ values ('fernadasilva@email.com',128937,234567),
 
 select * from usuario;<br>
 
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newusuario.png)<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Usuario.png)<br>
 
 select * from onibus;<br>
 
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newonibus.png)<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/onibus.png)<br>
 
 select * from ponto_de_onibus;<br>
 
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newponto_de_onibus.png)<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Ponto_de_Onibus.png)<br>
 
-select * from ponto_onibus;<br>
+select * from rela_onibus_ponto_de_onibus_relacao1;<br>
 
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newponto_onibus.png)<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Rela_onibus_ponto.png)<br>
 
-select * from acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS;<br>
+select * from ponto_usuario;<br>
 
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/newisso.png)<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Ponto_Usuario.png)<br>
+
+select * from onibus_usuario;<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Onibus_Usuario.png)<br>
+
+select * from ponto_usuario ***;<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Usu_Logradouro.png)<br>
+
+select * from ponto_usuario ***;<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Ponto_Logradouro.png)<br>
+
+select * from ponto_usuario ***;<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Nome_Logradouro.png)<br>
+
+select * from ponto_usuario ***;<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Logradouro.png)<br>
+
+select * from ponto_usuario ***;<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Estado.png)<br>
+
+select * from ponto_usuario ***;<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Cidade.png)<br>
+
+select * from ponto_usuario ***;<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Bairro.png)<br>
 <br>
 
 #### 9.2 CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
