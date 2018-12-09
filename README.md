@@ -294,7 +294,7 @@ ALTER TABLE ponto_usuario ADD CONSTRAINT FK_ponto_usuario_2
         a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
         b) formato .SQL
         
-insert into RELA_PONTO_ONIBUS_Relacao_1(id, horario, ordem, fk_onibus_n_onibus. fk_ponto_de_onibus_n_ponto) values (234567,'20:09', 1, 234567, 128937),(534285,'12:08',12, 534285, 12345),(123454,'13:00', 7, 876557, 4893095),(876557,'05:50', 5, 785444, 123090),(645323,'04:00',53, 978678, 53034), (785444,'14:55',9, 64321, 96543),(45689,'09:05',10, 534285, 1006),(978678,'20:45',12, 234567, 87654),(12345,'23:50',123, 64321, 12456),(64321,'19:02',48, 785444, 87654);
+insert into RELA_PONTO_ONIBUS_Relacao_1(id, horario, ordem, fk_onibus_n_onibus, fk_ponto_de_onibus_n_ponto) values (234567,'20:09', 1, 234567, 128937),(534285,'12:08',12, 534285, 12345),(123454,'13:00', 7, 876557, 4893095),(876557,'05:50', 5, 785444, 123090),(645323,'04:00',53, 978678, 53034), (785444,'14:55',9, 64321, 96543),(45689,'09:05',10, 534285, 1006),(978678,'20:45',12, 234567, 87654),(12345,'23:50',123, 64321, 12456),(64321,'19:02',48, 785444, 87654);
 
 insert into ponto_usuario(fk_usuario_codigo, fk_ponto_de_onibus_n_ponto, data) values ('1', 128937, '12-09-2018'), ('2', 12345, '10-10-2018'), ('3',87654, '09-11-2018'),('4', 57687,'04-09-2018'), ('5', 53034,'05-08-2018'), ('6', 96543,'08-11-2018'), ('7',1006 ,'07-11-2018'), ('8', 12456,'10-11-2018'), ('9', 123090,'10-10-2018'), ('10',4893095,'09-11-2018');
 
@@ -302,7 +302,7 @@ insert into onibus_usuario(fk_usuario_codigo, fk_onibus_n_onibus, data) values (
 
 insert into logradouro (codigo, descricao, fk_bairro_codigo) values (1, 'rua', 10), (2, 'avenida', 9), (3, 'alameda', 8), (4, 'ladeira', 7), (5, 'viaduto', 6), (6, 'canal', 5), (7, 'beco', 4), (8, 'contorno', 3), (9, 'trevo', 2), (10, 'via', 1);
 
-insert into ponto_logradouro (fk_logradouro_codigo, fk_ponto_de_onibus_n_ponto) values (1, 128937), (2, 12345), (3, 87654), (4, 57687), (5, 53034), (6, 96543) (7, 1006), (8, 12456), (9, 123090), (10, 4893095);
+insert into ponto_logradouro (fk_logradouro_codigo, fk_ponto_de_onibus_n_ponto) values (1, 128937), (2, 12345), (3, 87654), (4, 57687), (5, 53034), (6, 96543), (7, 1006), (8, 12456), (9, 123090), (10, 4893095);
 
 insert into usu_logradouro (fk_usuario_codigo, fk_logradouro_codigo) values ('1', 2), ('2', 3), ('3', 4), ('4', 5), ('5', 6), ('6', 7), ('7', 8), ('8', 9), ('9', 10), ('10', 1);
 
@@ -383,7 +383,7 @@ ALTER TABLE ponto_usuario ADD CONSTRAINT FK_ponto_usuario_1 FOREIGN KEY (fk_USUA
 
 ALTER TABLE ponto_usuario ADD CONSTRAINT FK_ponto_usuario_2 FOREIGN KEY (fk_PONTO_DE_ONIBUS_n_ponto) REFERENCES PONTO_DE_ONIBUS (n_ponto) ON DELETE SET NULL;
 
-insert into RELA_PONTO_ONIBUS_Relacao_1(id, horario, ordem, fk_onibus_n_onibus. fk_ponto_de_onibus_n_ponto) values (234567,'20:09', 1, 234567, 128937),(534285,'12:08',12, 534285, 12345),(123454,'13:00', 7, 876557, 4893095),(876557,'05:50', 5, 785444, 123090),(645323,'04:00',53, 978678, 53034), (785444,'14:55',9, 64321, 96543),(45689,'09:05',10, 534285, 1006),(978678,'20:45',12, 234567, 87654),(12345,'23:50',123, 64321, 12456),(64321,'19:02',48, 785444, 87654);
+insert into RELA_PONTO_ONIBUS_Relacao_1(id, horario, ordem, fk_onibus_n_onibus, fk_ponto_de_onibus_n_ponto) values (234567,'20:09', 1, 234567, 128937),(534285,'12:08',12, 534285, 12345),(123454,'13:00', 7, 876557, 4893095),(876557,'05:50', 5, 785444, 123090),(645323,'04:00',53, 978678, 53034), (785444,'14:55',9, 64321, 96543),(45689,'09:05',10, 534285, 1006),(978678,'20:45',12, 234567, 87654),(12345,'23:50',123, 64321, 12456),(64321,'19:02',48, 785444, 87654);
 
 insert into ponto_usuario(fk_usuario_codigo, fk_ponto_de_onibus_n_ponto, data) values ('1', 128937, '12-09-2018'), ('2', 12345, '10-10-2018'), ('3',87654, '09-11-2018'),('4', 57687,'04-09-2018'), ('5', 53034,'05-08-2018'), ('6', 96543,'08-11-2018'), ('7',1006 ,'07-11-2018'), ('8', 12456,'10-11-2018'), ('9', 123090,'10-10-2018'), ('10',4893095,'09-11-2018');
 
@@ -391,7 +391,7 @@ insert into onibus_usuario(fk_usuario_codigo, fk_onibus_n_onibus, data) values (
 
 insert into logradouro (codigo, descricao, fk_bairro_codigo) values (1, 'rua', 10), (2, 'avenida', 9), (3, 'alameda', 8), (4, 'ladeira', 7), (5, 'viaduto', 6), (6, 'canal', 5), (7, 'beco', 4), (8, 'contorno', 3), (9, 'trevo', 2), (10, 'via', 1);
 
-insert into ponto_logradouro (fk_logradouro_codigo, fk_ponto_de_onibus_n_ponto) values (1, 128937), (2, 12345), (3, 87654), (4, 57687), (5, 53034), (6, 96543) (7, 1006), (8, 12456), (9, 123090), (10, 4893095);
+insert into ponto_logradouro (fk_logradouro_codigo, fk_ponto_de_onibus_n_ponto) values (1, 128937), (2, 12345), (3, 87654), (4, 57687), (5, 53034), (6, 96543), (7, 1006), (8, 12456), (9, 123090), (10, 4893095);
 
 insert into usu_logradouro (fk_usuario_codigo, fk_logradouro_codigo) values ('1', 2), ('2', 3), ('3', 4), ('4', 5), ('5', 6), ('6', 7), ('7', 8), ('8', 9), ('9', 10), ('10', 1);
 
@@ -593,7 +593,7 @@ ALTER TABLE ponto_usuario ADD CONSTRAINT FK_ponto_usuario_2
     ON DELETE SET NULL;
 
 
-insert into RELA_PONTO_ONIBUS_Relacao_1(id, horario, ordem, fk_onibus_n_onibus. fk_ponto_de_onibus_n_ponto) values (234567,'20:09', 1, 234567, 128937),(534285,'12:08',12, 534285, 12345),(123454,'13:00', 7, 876557, 4893095),(876557,'05:50', 5, 785444, 123090),(645323,'04:00',53, 978678, 53034), (785444,'14:55',9, 64321, 96543),(45689,'09:05',10, 534285, 1006),(978678,'20:45',12, 234567, 87654),(12345,'23:50',123, 64321, 12456),(64321,'19:02',48, 785444, 87654);
+insert into RELA_PONTO_ONIBUS_Relacao_1(id, horario, ordem, fk_onibus_n_onibus, fk_ponto_de_onibus_n_ponto) values (234567,'20:09', 1, 234567, 128937),(534285,'12:08',12, 534285, 12345),(123454,'13:00', 7, 876557, 4893095),(876557,'05:50', 5, 785444, 123090),(645323,'04:00',53, 978678, 53034), (785444,'14:55',9, 64321, 96543),(45689,'09:05',10, 534285, 1006),(978678,'20:45',12, 234567, 87654),(12345,'23:50',123, 64321, 12456),(64321,'19:02',48, 785444, 87654);
 
 insert into ponto_usuario(fk_usuario_codigo, fk_ponto_de_onibus_n_ponto, data) values ('1', 128937, '12-09-2018'), ('2', 12345, '10-10-2018'), ('3',87654, '09-11-2018'),('4', 57687,'04-09-2018'), ('5', 53034,'05-08-2018'), ('6', 96543,'08-11-2018'), ('7',1006 ,'07-11-2018'), ('8', 12456,'10-11-2018'), ('9', 123090,'10-10-2018'), ('10',4893095,'09-11-2018');
 
@@ -601,7 +601,7 @@ insert into onibus_usuario(fk_usuario_codigo, fk_onibus_n_onibus, data) values (
 
 insert into logradouro (codigo, descricao, fk_bairro_codigo) values (1, 'rua', 10), (2, 'avenida', 9), (3, 'alameda', 8), (4, 'ladeira', 7), (5, 'viaduto', 6), (6, 'canal', 5), (7, 'beco', 4), (8, 'contorno', 3), (9, 'trevo', 2), (10, 'via', 1);
 
-insert into ponto_logradouro (fk_logradouro_codigo, fk_ponto_de_onibus_n_ponto) values (1, 128937), (2, 12345), (3, 87654), (4, 57687), (5, 53034), (6, 96543) (7, 1006), (8, 12456), (9, 123090), (10, 4893095);
+insert into ponto_logradouro (fk_logradouro_codigo, fk_ponto_de_onibus_n_ponto) values (1, 128937), (2, 12345), (3, 87654), (4, 57687), (5, 53034), (6, 96543), (7, 1006), (8, 12456), (9, 123090), (10, 4893095);
 
 insert into usu_logradouro (fk_usuario_codigo, fk_logradouro_codigo) values ('1', 2), ('2', 3), ('3', 4), ('4', 5), ('5', 6), ('6', 7), ('7', 8), ('8', 9), ('9', 10), ('10', 1);
 
