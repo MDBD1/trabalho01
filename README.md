@@ -141,7 +141,7 @@ bairro, cidade e estado respectivamente.<br>
     
 >## Marco de Entrega 01 em: (12/05/2018)<br>
 ### 6 MODELO LÓGICO<br>
-   ![Modelo lógico](https://github.com/MDBD1/trabalho01/blob/master/imagens/ModeloConceitualFinal.png)
+   ![Modelo lógico](https://github.com/MDBD1/trabalho01/blob/master/imagens/ultimobrmodelo.png)
 ### 7 MODELO FÍSICO<br>
 
 CREATE TABLE USUARIO (
