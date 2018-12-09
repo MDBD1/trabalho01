@@ -682,18 +682,16 @@ select * from bairro;<br>
 
 #### 9.2 CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
-select * from usuario where cidade='Serra';<br>
 
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.2select1.png)<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/where1.png)<br>
 
-select nome from usuario where n_da_casa='1601';<br>
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.2select2.png)<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/where2.png)<br>
 
-select * from usuario where bairro<>'Valparaíso';<br>
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.2select3.png)<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/where3.png)<br>
 
-select * from onibus where n_onibus=234567;<br>
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.2select4.png)<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/where4.png)<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/where5.png)<br>
 
 <br>
 
