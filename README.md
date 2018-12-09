@@ -117,25 +117,42 @@ Campo Data (data): criamos esse campo para um melhor controle e organização so
 #### 5.3 DESCRIÇÃO DOS DADOS
     [objeto]: [descrição do objeto]
     
-USUÁRIO: Tabela que armazenas as informações relativas ao usuário<br>
-E-MAIL: campo que armazena o e-mail de cada usuário cadastrado no sistema<br>
-SENHA: campo que armazena a senha de cada usuário<br>
-NOME: campo que armazena o nome de cada usuário<br>
-RUA_AVENIDA_ALAMEDA, BAIRRO, CIDADE, ESTADO e NÚMERO_DA_CASA: campos que armazenam o endereço do usuário, sua rua,
-bairro, cidade, estado e número de sua casa, respectivamente.<br>
+USUÁRIO: Tabela que armazenas as informações referentes ao usuário:<br>
+E-MAIL: campo que armazena o e-mail de cada usuário cadastrado no sistema;<br>
+SENHA: campo que armazena a senha de cada usuário;<br>
+NOME: campo que armazena o nome de cada usuário;<br>
+N_DA_CASA: campo que armazena o número da casa de cada usuario;<br>
+CODIGO: campo que armazena o código de cada usuário.<br>
 
-ÔNIBUS: Tabela que armazena as informações relativas aos ônibus<br>
-NÚMERO_DO_ÔNIBUS: campo que armazena o número que identifica o ônibus<br>
-NÚMERO_DA_LINHA:  campo que armazena a linha do ônibus<br>
-HORÁRIO_DE_SAÍDA: campo que armazena os horários que os respectivos ônibus saem de seu ponto inicial<br>
-HORÁRIO_DE_CHAGADO: campo que armazena os hosrários de chegada que os ônibus chegam em seu ponto final<br>
-ITINERÁRIO:  campo que armazena os locais em que os ônibus circulam<br>
+ÔNIBUS: Tabela que armazena as informações relativas aos ônibus:<br>
+N_ÔNIBUS: campo que armazena o número que identifica o ônibus;<br>
+TIPO_DE_ONIBUS: campo que armazena a categoria do ônibus.<br>  
 
-PONTO_DE_ÔNIBUS: Tabela que armazena as informções relativas aos pontos de ônibus<br>
-NÚMERO_DO_PONTO: campo que armazena o número que indentifica o  ponto de ôonibus.
-EMPRESA_DO_ÔNIBUS: campo que armazena a empresa dos ônibus que opera no ponto de ônibus<br>
-RUA_AVENIDA_ALAMEDA, BAIRRO, CIDADE e ESTADO: campos que armazenam o endereço do ponto de ônibus, sua rua,<br>
-bairro, cidade e estado respectivamente.<br>  
+PONTO_DE_ÔNIBUS: Tabela que armazena as informções referentes aos pontos de ônibus:<br>
+N_PONTO: campo que armazena o número que identifica o  ponto de ôonibus.<br>
+
+RELA_PONTO_ONIBUS: tabela que armazena as informações que relacionam o ÔNIBUS com seus PONTOS DE ÔNIBUS:<br>
+HORARIO: campo que armazena os horários de saída e chegada do ônibus;<br>
+ID: campo que armazena o id do ônibus;<br>
+ORDEM: campo que armazena a ordem dos ônibus:<br>
+
+LOGRADOURO: tabela que armazena informações referentes aos logradouros, que faz parte do endereço:<br>
+DESCRICAO: campo que armazena a descrição referente ao logradouro.<br>
+
+NOME_LOGRADOURO: tabela que armazena dados referentes ao logradouro:<br>
+NOME: campo que armazena o nome do logradouro.<br>
+
+BAIRRO: tabela que armazena dados referentes aos bairro:<br>
+NOME: campo que armazena o nome de cada bairro;<br>
+CODIGO: campo que armazena o código de cada bairro.<br>
+
+CIDADE: tabela que armazena informações referentes as cidades:<br>
+NOME: campo que o nome de cada cidade;<br>
+CODIGO: campo que armazena o código de cada cidade.<br>
+
+ESTADO: tabela que armazena as informações referentes a cada estado:<br>
+NOME: campo que armazena o nome de cada estado;<br>
+CODIGO: campo que armazena o código de cada estado;<br>
 
 ÔNIBUS_PONTO: tabela que armazena as informações que relacionam o ÔNIBUS com seus PONTOS DE ÔNIBUS<BR>
     
