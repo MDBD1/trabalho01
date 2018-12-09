@@ -724,17 +724,17 @@ a)<br>
 
 b)<br>
 
-select n_linha+1000 from onibus where n_onibus<60000;<br>
 
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.3select1b.png)<br>
 
-select n_onibus%2 from onibus where n_onibus>200000;<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/1.png)<br>
 
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.3select2b.png)<br>
 
-select n_ponto*1.1 from ponto_de_onibus;<br>
 
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.3select3b.png)<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/2.png)<br>
+
+
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/3.png)<br>
 
 <br>
 c)
