@@ -559,7 +559,7 @@ select * from ponto_de_onibus;<br>
 
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Ponto_de_Onibus.png)<br>
 
-select * from rela_onibus_ponto_de_onibus_relacao1;<br>
+select * from rela_ponto_onibus_relacao_1;<br>
 
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Rela_onibus_ponto.png)<br>
 
@@ -571,31 +571,31 @@ select * from onibus_usuario;<br>
 
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Onibus_Usuario.png)<br>
 
-select * from ponto_usuario ***;<br>
+select * from usu_logradouro;<br>
 
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Usu_Logradouro.png)<br>
 
-select * from ponto_usuario ***;<br>
+select * from ponto_logradouro;<br>
 
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Ponto_Logradouro.png)<br>
 
-select * from ponto_usuario ***;<br>
+select * from nome_logradouro;<br>
 
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Nome_Logradouro.png)<br>
 
-select * from ponto_usuario ***;<br>
+select * from logradouro;<br>
 
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Logradouro.png)<br>
 
-select * from ponto_usuario ***;<br>
+select * from estado;<br>
 
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Estado.png)<br>
 
-select * from ponto_usuario ***;<br>
+select * from cidade;<br>
 
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Cidade.png)<br>
 
-select * from ponto_usuario ***;<br>
+select * from bairro;<br>
 
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/Bairro.png)<br>
 <br>
