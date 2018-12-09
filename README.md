@@ -770,13 +770,13 @@ a)<br>
 
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/where1.png)<br>
 
-select * from ponto_de_onibus where estado like'%Paulo';<br>
 
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.4select4a.png)<br>
 
-select * from usuario where bairro like'L%';<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/like1.png)<br>
 
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.4select5a.png)<br>
+
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/like2.png)<br>
 
 
 <br>
