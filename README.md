@@ -837,48 +837,21 @@ Nós não fizemos esse tópico, pois o nosso trabalho não precisa da informaç�
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/up3.png)<br>
 
 
-ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS drop constraint FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_0;
-ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS drop constraint FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_1;
-ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS drop constraint FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_2;
-ALTER TABLE ponto_onibus drop constraint FK_ponto_onibus_0;
-ALTER TABLE ponto_onibus drop constraint FK_ponto_onibus_1;
+ALTER TABLE usu_logradouro drop constraint fk_usu_logradouro_1;<br>
+delete from usuario where nome like 'Júli%';<br>
 
-ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_0
-    FOREIGN KEY (FK_USUARIO_email)
-    REFERENCES USUARIO (email)
-    ON DELETE CASCADE ON UPDATE CASCADE;
- 
-ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_1
-    FOREIGN KEY (FK_PONTO_DE_ONIBUS_n_ponto)
-    REFERENCES PONTO_DE_ONIBUS (n_ponto)
-    ON DELETE CASCADE ON UPDATE CASCADE;
- 
-ALTER TABLE acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS ADD CONSTRAINT FK_acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS_2
-    FOREIGN KEY (FK_ONIBUS_n_onibus)
-    REFERENCES ONIBUS (n_onibus)
-    ON DELETE CASCADE ON UPDATE CASCADE;
- 
-ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_0
-    FOREIGN KEY (FK_ONIBUS_n_onibus)
-    REFERENCES ONIBUS (n_onibus)
-    ON DELETE CASCADE ON UPDATE CASCADE;
- 
-ALTER TABLE ponto_onibus ADD CONSTRAINT FK_ponto_onibus_1
-    FOREIGN KEY (FK_PONTO_DE_ONIBUS_n_ponto)
-    REFERENCES PONTO_DE_ONIBUS (n_ponto)
-    ON DELETE CASCADE ON UPDATE CASCADE; 
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/usu.png)<br>
 
-delete from usuario where n_da_casa='56';<br>
+ALTER TABLE rela_ponto_onibus_relacao_1 drop constraint fk_rela_ponto_onibus_relacao_1_2;<br>
+delete from onibus where n_onibus = 234567;<br>
 
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.5delete1.png)<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/rela.png)<br>
 
-delete from onibus where n_onibus=234567;<br>
+ALTER TABLE rela_ponto_onibus_relacao_1 drop constraint fk_rela_ponto_onibus_relacao_1_3;<br>
+ALTER TABLE ponto_logradouro drop constraint fk_ponto_logradouro_2;<br>
+delete from ponto_de_onibus where n_ponto = 12345;<br>
 
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.5delete2.png)<br>
-
-delete from ponto_de_onibus where bairro='Rosário de Fátima';<br>
-
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.5delete3.png)<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/pontodeonibus.png)<br>
 <br>
 #### 9.6 CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
