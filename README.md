@@ -117,7 +117,7 @@ Campo Data (data): criamos esse campo para um melhor controle e organização so
 #### 5.3 DESCRIÇÃO DOS DADOS
     [objeto]: [descrição do objeto]
     
-USUÁRIO: Tabela que armazenas as informações referentes ao usuário:<br>
+USUARIO: Tabela que armazenas as informações referentes ao usuário:<br>
 E-MAIL: campo que armazena o e-mail de cada usuário cadastrado no sistema;<br>
 SENHA: campo que armazena a senha de cada usuário;<br>
 NOME: campo que armazena o nome de cada usuário;<br>
@@ -128,7 +128,7 @@ CODIGO: campo que armazena o código de cada usuário.<br>
 N_ÔNIBUS: campo que armazena o número que identifica o ônibus;<br>
 TIPO_DE_ONIBUS: campo que armazena a categoria do ônibus.<br>  
 
-PONTO_DE_ÔNIBUS: Tabela que armazena as informções referentes aos pontos de ônibus:<br>
+PONTO_DE_ONIBUS: Tabela que armazena as informções referentes aos pontos de ônibus:<br>
 N_PONTO: campo que armazena o número que identifica o  ponto de ôonibus.<br>
 
 RELA_PONTO_ONIBUS: tabela que armazena as informações que relacionam o ÔNIBUS com seus PONTOS DE ÔNIBUS:<br>
@@ -152,10 +152,30 @@ CODIGO: campo que armazena o código de cada cidade.<br>
 
 ESTADO: tabela que armazena as informações referentes a cada estado:<br>
 NOME: campo que armazena o nome de cada estado;<br>
-CODIGO: campo que armazena o código de cada estado;<br>
+CODIGO: campo que armazena o código de cada estado;<br>   
 
-ÔNIBUS_PONTO: tabela que armazena as informações que relacionam o ÔNIBUS com seus PONTOS DE ÔNIBUS<BR>
-    
+ONIBUS_USUARIO: relação que que faz associação entre as tabelas ônibus e usuário:<br>
+DATA: campo que armazena cada data em que o usuário acessou o ônibus .<br>
+
+PONTO_USUARIO:  relação que faz associação entre o as tabelas PONTO_DE_ONIBUS e USUARIO:<br>
+DATA: campo que armazena a data em que o usuário acessou as informações referentes a um ponto de ônibus.<br>
+
+ONIBUS_USUARIO: relação que faz associação entre as tabelas ONIBUS e USUARIO:<br>
+DATA: campo que armazena a data em que o usuário acessou as informações de determinado ônibus.<br>
+
+PONTO_LOGRADOURO: relação que faz a associação entre as tabelas PONTO_DE_ONIBUS e LOGRADOURO.<br>
+
+USU_LOGRADOURO: relação que faz associação entre as tabelas USUARIO e LOGRADOURO.<br>
+
+NOMELOG_LOGRADOURO: relação que faz associação entre as tabelas LOGRADOURO e NOMELOGRADOURO.<br>
+
+RELACIONAMENTO_3: relação que que faz associação das trabelas LOGRADOURO e BAIRRO.<br>
+
+BAIRRO_CIDADE: relação que faz associação entre as tabelas BAIRRO e CIDADE.<br>
+
+CIDADE_ESTADO: relação que faz associação entre as tabelas CIDADE e ESTADO.<br>
+
+
 >## Marco de Entrega 01 em: (12/05/2018)<br>
 ### 6 MODELO LÓGICO<br>
    ![Modelo lógico](https://github.com/MDBD1/trabalho01/blob/master/imagens/%C3%BAltimomodelologico.png)
