@@ -868,11 +868,15 @@ inner join bairro as br on (br.codigo = log2.fk_bairro_codigo) inner join cidade
 <br>
 b)<br>
 
-select U.nome,O.n_onibus, PDO.tipo_de_onibus  from usuario U
-inner join onibus O on(U.rua_avenida = O.itinerario)
-inner join ponto_de_onibus 	PDO on (O.itinerario = PDO.rua_avenida);
+select pl.fk_ponto_de_onibus_n_ponto, cd.nome from ponto_logradouro as pl<br>  
+inner join logradouro as log  <br>
+on (pl.fk_logradouro_codigo = log.fk_bairro_codigo)<br> 
+inner join bairro as br  <br>
+on (log.fk_bairro_codigo = br.codigo)<br> 
+inner join cidade as cd<br>
+on (cd.codigo = br.fk_cidade_codigo)<br>
 
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.6selectb.png)<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/inner1.png)<br>
 
 <br>
         
