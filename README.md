@@ -885,6 +885,39 @@ on (cd.codigo = br.fk_cidade_codigo)<br>
 <br>
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
 
+select count(usu.codigo) as qtd, cd.nome from usuario as usu <br> 
+inner join usu_logradouro  as log on (usu.codigo = log.fk_usuario_codigo) <br>
+inner join logradouro as log2 on (log2.codigo = log.fk_logradouro_codigo) <br> 
+inner join bairro  as br  on (br.codigo = log2.fk_bairro_codigo) <br>
+inner join cidade as cd on (cd.codigo = br.fk_cidade_codigo) group by cd.nome;<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/group1.png)<br>
+
+select count(id), fk_ONIBUS_n_onibus,  fk_PONTO_DE_ONIBUS_n_ponto  <br>
+from rela_ponto_onibus_relacao_1 group by fk_ONIBUS_n_onibus, fk_PONTO_DE_ONIBUS_n_ponto; <br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/group2.png)<br>
+
+select count(fk_USUARIO_codigo), data, fk_ponto_de_onibus_n_ponto <br>
+from ponto_usuario group by data, fk_ponto_de_onibus_n_ponto; <br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/group3.png)<br>
+
+select count(fk_USUARIO_codigo), data, fk_onibus_n_onibus <br>
+from onibus_usuario group by data, fk_onibus_n_onibus; <br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/group4.png)<br>
+
+select log.descricao, nl.nome from logradouro as log <br>
+inner join nome_logradouro as nl on (log.codigo = nl.fk_logradouro_codigo) order by nl.nome; <br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/group5.png)<br>
+
+select count(n_onibus), tipo_de_onibus <br>
+from onibus group by tipo_de_onibus; <br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/group6.png)<br>
+
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
