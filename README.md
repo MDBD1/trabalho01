@@ -919,6 +919,26 @@ from onibus group by tipo_de_onibus; <br>
 ![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/group6.png)<br>
 
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
+
+select bairro.codigo as codigo_do_bairro, cidade.nome as nome_da_cidade <br>
+from bairro right outer join cidade on (bairro.fk_cidade_codigo = cidade.codigo); <br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/d1.png)<br>
+
+select bairro.codigo as codigo_do_bairro, bairro.nome as nome_do_bairro, cidade.nome as nome_da_cidade <br>
+from bairro left outer join cidade on (bairro.fk_cidade_codigo = cidade.codigo)<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/d2.png)<br>
+
+select oni.n_linha as numero_da_linha_do_onibus, rela.fk_ponto_de_onibus_n_ponto as ponto_de_onibus <br>
+from onibus as oni left outer join rela_ponto_onibus_relacao_1 as rela on (oni.n_onibus = rela.fk_onibus_n_onibus)<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/d3.png)<br>
+
+select oni.n_onibus as numero_do_onibus, oni.n_linha as numero_da_linha_do_onibus, rela.fk_ponto_de_onibus_n_ponto as ponto_de_onibus<br> from onibus as oni right outer join rela_ponto_onibus_relacao_1 as rela on (oni.n_onibus = rela.fk_onibus_n_onibus)<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/d4.png)<br>
+
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
