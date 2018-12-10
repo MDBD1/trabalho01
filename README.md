@@ -858,13 +858,12 @@ delete from ponto_de_onibus where n_ponto = 12345;<br>
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
         
 a)<br>
-select U.nome,AU.FK_USUARIO_email,O.n_onibus, PDO.tipo_de_onibus, PO.FK_PONTO_DE_ONIBUS_n_ponto  from usuario U
-inner join onibus O on(U.rua_avenida = O.itinerario)
-inner join ponto_de_onibus 	PDO on (O.itinerario = PDO.rua_avenida)
-inner join ponto_onibus PO on (PDO.n_ponto=PO.FK_PONTO_DE_ONIBUS_n_ponto)
-inner join acesso_USUARIO_PONTO_DE_ONIBUS_ENTRADA_ONIBUS AU on (U.email = AU.FK_USUARIO_email);
+select count(usu.codigo) as qtd, cd.nome from usuario as usu <br>
+inner join usu_logradouro as log on (usu.codigo = log.fk_usuario_codigo) inner join logradouro as log2 on (log2.codigo = log.fk_logradouro_codigo) <br> 
+inner join bairro as br on (br.codigo = log2.fk_bairro_codigo) inner join cidade as cd on (cd.codigo = br.fk_cidade_codigo) group by cd.nome; <br>
+<br>
 
-![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/9.6selecta.png)<br>
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/inner2.png)<br>
 
 <br>
 b)<br>
