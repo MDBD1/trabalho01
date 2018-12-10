@@ -944,6 +944,21 @@ select oni.n_onibus as numero_do_onibus, oni.n_linha as numero_da_linha_do_onibu
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 
+select * from onibus <br>
+where n_onibus in (12345)<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/sub1.png)<br>
+
+select * from onibus <br>
+where n_onibus in (select fk_ponto_de_onibus_n_ponto from rela_ponto_onibus_relacao_1 as rela )<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/sub2.png)<br>
+
+select * from usuario <br>
+where codigo in (select fk_usuario_codigo from usu_logradouro where fk_usuario_codigo > 5)<br>
+
+![Alt text](https://github.com/MDBD1/trabalho01/blob/master/imagens/sub3.png)<br>
+
 #### 9.11	LISTA DE CODIGOS DAS FUNÇÕES E TRIGGERS<br>
         Detalhamento sobre funcionalidade de cada código.
         a) Objetivo
