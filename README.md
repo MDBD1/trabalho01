@@ -868,7 +868,7 @@ inner join bairro as br on (br.codigo = log2.fk_bairro_codigo) inner join cidade
 <br>
 b)<br>
 
-select pl.fk_ponto_de_onibus_n_ponto, cd.nome from ponto_logradouro as pl<br>  
+select pl.fk_ponto_de_onibus_n_ponto, cd.nome from ponto_logradouro as pl <br> 
 inner join logradouro as log  <br>
 on (pl.fk_logradouro_codigo = log.fk_bairro_codigo)<br> 
 inner join bairro as br  <br>
